@@ -1,0 +1,83 @@
+// -----------------------------
+//
+// mixins.less by Carbon Crayon 
+// 
+// Primary file to set custom mixins
+//
+// -----------------------------
+
+
+
+
+// rem font sizes with a px fallback for old ie 
+// -----------------------------------------------
+.font-size(@font: 16, @line: 1.4) {
+  @fontRem: (@font / 10);
+  @lineRem: (@fontRem * @line);
+  font-size : @font * 1px;
+  line-height: @font * @line * 1px;
+  font-size : ~"@{fontRem}rem"; 
+  line-height : ~"@{lineRem}rem"; 
+}
+
+
+
+// ss-bits coloured icons 
+// -----------------------------------------------
+.ssb-icon {
+	display: block;
+	background-image: url('../images/ssb-icons.png');
+
+	//default small size
+	width: 21px;
+	height: 21px;
+
+	&.green,
+	&.Tutorial,
+	&.TutorialListingPage {
+		background-position: 0 0;
+	}
+	&.red,
+	&.SOTMPage,
+	&.SOTMPost {
+		background-position: -21px 0;
+	}
+	&.blue,
+	&.Snippet,
+	&.SnippetListingPage {
+		background-position: -42px 0;
+	}
+	&.orange,
+	&.View,
+	&.ViewListingPage {
+		background-position: -63px 0;
+	}
+
+	//large size
+	&.large {
+		width: 59px;
+		height: 59px;
+
+		&.green,
+		&.Tutorial,
+		&.TutorialListingPage {
+			background-position: 0 -41px;
+		}
+		&.red,
+		&.SOTMPage,
+		&.SOTMPost {
+			background-position: -59px -41px;
+		}
+		&.blue,
+		&.Snippet,
+		&.SnippetListingPage {
+			background-position: -118px -41px;
+		}
+		&.orange,
+		&.View,
+		&.ViewListingPage {
+			background-position: -177px -41px;
+		}
+	}
+
+}

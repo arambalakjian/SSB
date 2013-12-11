@@ -1,0 +1,352 @@
+// ----------------------------
+//
+// mediaqueries.less
+//
+// media queries to adjust the site for different screen resolutions and devices
+//
+// CONTENTS
+//
+// - Tablet
+// - Desktop
+// - Large Desktop
+// - Print
+//
+// ------------------------------------/
+
+
+// -------------------------
+//
+// TABLET
+//
+// ----------------------------/
+@media (min-width: @screen-tablet) {
+
+  // header //
+  .header {
+    //header-brand //
+    .navbar-brand {
+      max-width: none;
+    }
+    .header-left, 
+    .header-mid,
+    .header-right {
+      overflow: visible;
+    }
+
+    .nav {
+      float: right;
+
+      li {
+        a {
+          display: block;
+          width: 130px;
+          padding: 15px 10px;
+          margin: 0 12px 0 0;
+          border: 1px solid @gray;
+          background-color: @white;
+          text-align: center;
+
+          i.ssb-icon {
+            position: absolute;
+            right: -6px;
+            top: -6px;
+          }
+
+          &:hover {
+            background-color: @white;
+            color: @brand-primary;
+          }
+        }
+      }
+    }
+    .sign-in-button,
+    .profile-utility-dropdown {
+      float: right;
+      margin: 0;
+    }
+
+    //header search //
+    form#SearchForm_SearchForm {
+      .pull-right; //pull the search box to the right when uncollapsed 
+
+      .field {
+        display: inline-block;
+        float: none;
+        margin: 0;
+        width: auto;
+        vertical-align: middle;
+        .middleColumn {
+          margin: 0;
+        }
+      }
+
+      input {
+        width: 45px;
+        padding: 15px 30px 15px 15px;
+        .transition(all 0.8s);
+
+        &:focus {
+          width: 150px;
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+
+  // Sticky Footer //
+  .sticky-footer {  //should be added to the body
+    height: 100%;
+
+    #page-wrapper{
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      margin: 0 auto -@footer-height; /* the bottom margin is the negative value of the footer's height (with padding) */
+    }
+    .footer {
+      height: @footer-height;
+    }
+    .push {
+      height: @footer-height;
+    }
+  }
+
+  //content blocks
+  .listing-block {
+    .details {
+      padding-bottom: 75px;
+    }
+    .read-more-bar {
+      width: 100%;
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      height: 43px;
+      text-align: right;
+
+      .read-more-button-container {
+        display: inline-block;
+        width: 55%;
+        .read-more {
+          margin: 0 15px 0 0;
+        }
+      }
+      .comments-button-container {
+        display: inline-block;
+        width: 45%;
+        .comments-button {
+          margin: 0 0 0 15px;
+        }
+      }
+    }
+
+    &.sotm {
+      .read-more-bar {
+        .read-more-button-container {
+          display: inline-block;
+          width: 100%;
+          .read-more {
+            margin: 0 15px;
+          }
+        }
+      }
+    }
+    &.snippet {
+      .read-more-bar {
+        padding: 0;
+
+        .github-button {
+          float: left;
+          width: 25%;
+        }
+        .read-more-button-container {
+          width: 40%;
+          .read-more {
+            margin: 0 15px 0 0;
+          }
+        }
+        .edit-snippet-button-container {
+          display: inline-block;
+          width: 30%;
+          .edit-snippet {
+            margin: 0;
+          }
+        }
+        .comments-button-container {
+          width: 30%;
+          .comments-button {
+            margin: 0;
+          }
+        }
+      }
+    }
+    &.dashboard {
+      .read-more-bar {
+        .read-more-button-container {
+          .read-more {
+            margin: 0;
+          }
+        }
+        .comments-button-container {
+          .comments-button {
+            margin: 0 0 0 15px;
+          }
+        }
+      }
+    }
+    .image {
+      .title-circle {
+        background-color: @brand-awards;
+        border-radius: 50%;
+        width: 162px;
+        height: 162px;
+        padding: 35px 30px;
+        color: #eda7a4;
+        .font-size(16);
+        font-family: @antenna-medium;
+        text-transform: uppercase;
+        text-align: center;
+
+        .month {
+          display: block;
+          margin-top: 10px;
+          .font-size(16);
+          color: @white;
+        }
+      }
+      i {
+        position: absolute;
+        top: 15px;
+        left: 5px;
+      }
+    }
+  }
+
+}
+
+// ------------------------------
+//
+// LANDSCAPE TABLETS AND DESKTOPS
+//
+// -------------------------------------/
+@media (min-width: @screen-desktop) {
+
+
+
+  //listing block
+  .listing-block {
+    .image {
+      .title-circle {
+        width: 212px;
+        height: 212px;
+        padding: 70px 40px;
+        color: #eda7a4;
+        .font-size(18);
+        font-family: @antenna-medium;
+        text-transform: uppercase;
+        text-align: center;
+
+        .month {
+          display: block;
+          margin-top: 10px;
+          .font-size(16);
+          color: @white;
+        }
+      }
+      i {
+        position: absolute;
+        top: 25px;
+        left: 8px;
+      }
+    }
+  }
+}
+
+
+
+// ------------------------------
+//
+// LARGE DESKTOPS
+//
+// -------------------------------------/
+@media (min-width: @screen-lg-desktop) {
+
+  //homepage
+  .HomePage {
+
+    //add the github logo to the snippets title
+    .latest-snippets {
+      .section-header-bar {
+        .section-title {
+          background: @gray-lighter url('../images/github-logo.png') 95% 11px no-repeat;
+        }
+      }
+    }
+  }
+
+  //listing block
+  .listing-block {
+    .image {
+      .title-circle {
+        width: 262px;
+        height: 262px;
+        padding: 85px 50px;
+        color: #eda7a4;
+        .font-size(24);
+        font-family: @antenna-medium;
+        text-transform: uppercase;
+        text-align: center;
+
+        .month {
+          display: block;
+          margin-top: 10px;
+          .font-size(18);
+          color: @white;
+        }
+      }
+      i {
+        position: absolute;
+        top: 34px;
+        left: 15px;
+      }
+    }
+  }
+
+}
+
+// ------------------------------
+//
+// PRINT
+//
+// -------------------------------------/
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  .header,
+  .footer {
+    display: none;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+}
+
+

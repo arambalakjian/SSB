@@ -1,0 +1,32 @@
+/vendor
+local-config.php
+/assets/Uploads
+/assets/_resampled
+/assets/_combinedfiles
+/themes/[THEME]/combinedfiles
+/silverstripe-cache
+
+# Ignore these files in Assets #
+/assets/*.jpg
+/assets/*.jpeg
+/assets/*.png
+/assets/*.gif
+/assets/*.html
+
+# Always ignore these files #
+*.zip
+*.exe
+*.sql
+*.tar
+*.gzip
+*.doc
+*.docx
+*.pdf
+*.xls
+*.xlsx
+*.mp3
+*.wav
+*.mov
+*.mp4
+*.m4v
+*.m4a
