@@ -5,7 +5,15 @@
 		<div class="view-list">
 			<div class="section-header-bar">
 				<div class="section-header-buttons">
-					<span class="section-header-button tag margin-right">Tags <i class="icon-chevron-down right"></i></span>
+					<div class="section-header-button tag margin-right">
+						Tags <i class="icon-chevron-down right"></i>
+						<ul>
+							<li><a href="#">Tag link</a></li>
+							<li><a href="#">Tag link</a></li>
+							<li><a href="#">Tag link</a></li>
+							<li><a href="#">Tag link</a></li>
+						</ul>
+					</div>
 				</div>
 				<div class="section-title">
 					<h2 class="latest-section-title">Views</h2>
