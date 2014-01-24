@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "04d57a5c52a064307167f598b21ac374",
+    "hash": "98f111a7cf4137bd0f028bc3d3654e8d",
     "packages": [
         {
             "name": "ajshort/silverstripe-gridfieldextensions",
@@ -49,6 +49,44 @@
             "time": "2013-11-22 04:19:50"
         },
         {
+            "name": "arambalakjian/dataobjectaspagefilter",
+            "version": "3.1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arambalakjian/DataObject-as-Page-Filter.git",
+                "reference": "2063e6d68f041fcae6e8489de26df38b677cae82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arambalakjian/DataObject-as-Page-Filter/zipball/2063e6d68f041fcae6e8489de26df38b677cae82",
+                "reference": "2063e6d68f041fcae6e8489de26df38b677cae82",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "3.1.*",
+                "silverstripe/dataobjectaspage": "3.1.x-dev",
+                "silverstripe/framework": "3.1.*"
+            },
+            "replace": {
+                "silverstripe/dataobjectaspagefilter": "*"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Aram Balakjian",
+                    "email": "aram@carboncrayon.com"
+                }
+            ],
+            "description": "Filter DataObjects created with the DataObjectAsPage module - Allows for multi select and match all filters",
+            "keywords": [
+                "dataobjectasapagefilter",
+                "filter",
+                "silverstripe"
+            ],
+            "time": "2013-12-30 14:13:47"
+        },
+        {
             "name": "carboncrayon/silverstripe-utils",
             "version": "dev-master",
             "source": {
@@ -86,12 +124,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "7332ed0b8c22466eca63c252c4bf0831c6db7a04"
+                "reference": "0e307890402a1a6a87729d56005d9a1fa5bb5c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/7332ed0b8c22466eca63c252c4bf0831c6db7a04",
-                "reference": "7332ed0b8c22466eca63c252c4bf0831c6db7a04",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/0e307890402a1a6a87729d56005d9a1fa5bb5c9e",
+                "reference": "0e307890402a1a6a87729d56005d9a1fa5bb5c9e",
                 "shasum": ""
             },
             "require": {
@@ -120,20 +158,20 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2013-12-05 17:44:56"
+            "time": "2014-01-17 10:56:46"
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.7",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d792632d27e1980d921cbbba12eab7b888338d4c"
+                "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d792632d27e1980d921cbbba12eab7b888338d4c",
-                "reference": "d792632d27e1980d921cbbba12eab7b888338d4c",
+                "url": "https://api.github.com/repos/composer/installers/zipball/c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
+                "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
                 "shasum": ""
             },
             "replace": {
@@ -163,7 +201,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
+                    "homepage": "http://dontkry.com",
                     "role": "Developer"
                 }
             ],
@@ -178,6 +216,7 @@
                 "codeigniter",
                 "concrete5",
                 "drupal",
+                "elgg",
                 "fuelphp",
                 "installer",
                 "joomla",
@@ -194,7 +233,7 @@
                 "wordpress",
                 "zend"
             ],
-            "time": "2013-10-24 16:13:49"
+            "time": "2013-12-24 18:04:46"
         },
         {
             "name": "guzzle/guzzle",
@@ -290,16 +329,16 @@
         },
         {
             "name": "knplabs/github-api",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "e0e6aaef596b2fa42cbe33f672aa5a549d6b1c7a"
+                "reference": "1a1817b6f5fad2af4ff9a1bcc7f7bf29699fe15b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/e0e6aaef596b2fa42cbe33f672aa5a549d6b1c7a",
-                "reference": "e0e6aaef596b2fa42cbe33f672aa5a549d6b1c7a",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/1a1817b6f5fad2af4ff9a1bcc7f7bf29699fe15b",
+                "reference": "1a1817b6f5fad2af4ff9a1bcc7f7bf29699fe15b",
                 "shasum": ""
             },
             "require": {
@@ -309,6 +348,9 @@
             },
             "require-dev": {
                 "phpunit/phpunit": ">=3.6.0"
+            },
+            "suggest": {
+                "knplabs/gaufrette": "Needed for optional Gaufrette cache"
             },
             "type": "library",
             "extra": {
@@ -344,7 +386,7 @@
                 "gist",
                 "github"
             ],
-            "time": "2013-11-02 21:08:48"
+            "time": "2014-01-05 04:09:12"
         },
         {
             "name": "silverstripe/cms",
@@ -395,21 +437,21 @@
         },
         {
             "name": "silverstripe/dataobjectaspage",
-            "version": "dev-master",
+            "version": "3.1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/arambalakjian/DataObjects-as-Pages.git",
-                "reference": "84283a5a03aeb1a4bc3912b82423b08591d64681"
+                "url": "https://github.com/arambalakjian/DataObject-as-Page.git",
+                "reference": "650020609ca991edd0d83358632db173333f9ba7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/arambalakjian/DataObjects-as-Pages/zipball/84283a5a03aeb1a4bc3912b82423b08591d64681",
-                "reference": "84283a5a03aeb1a4bc3912b82423b08591d64681",
+                "url": "https://api.github.com/repos/arambalakjian/DataObject-as-Page/zipball/650020609ca991edd0d83358632db173333f9ba7",
+                "reference": "650020609ca991edd0d83358632db173333f9ba7",
                 "shasum": ""
             },
             "require": {
-                "silverstripe/cms": "3.*",
-                "silverstripe/framework": "3.*"
+                "silverstripe/cms": "3.1.*",
+                "silverstripe/framework": "3.1.*"
             },
             "replace": {
                 "silverstripe/dataobjectaspage": "*"
@@ -419,7 +461,7 @@
             "authors": [
                 {
                     "name": "Aram Balakjian",
-                    "email": "aram@aabweb.co.uk"
+                    "email": "aram@carboncrayon.com"
                 }
             ],
             "description": "Manage DataObjects through model admin but display them as pages on the site",
@@ -427,7 +469,7 @@
                 "dataobjectasapage",
                 "silverstripe"
             ],
-            "time": "2013-12-02 16:29:07"
+            "time": "2013-12-30 14:55:14"
         },
         {
             "name": "silverstripe/framework",
@@ -515,17 +557,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.4.0",
+            "version": "v2.4.1",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e"
+                "reference": "e3ba42f6a70554ed05749e61b829550f6ac33601"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
-                "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/e3ba42f6a70554ed05749e61b829550f6ac33601",
+                "reference": "e3ba42f6a70554ed05749e61b829550f6ac33601",
                 "shasum": ""
             },
             "require": {
@@ -565,7 +607,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2013-12-03 14:52:22"
+            "time": "2013-12-28 08:12:03"
         }
     ],
     "packages-dev": [
@@ -578,6 +620,7 @@
     "stability-flags": {
         "carboncrayon/silverstripe-utils": 20,
         "silverstripe/dataobjectaspage": 20,
+        "arambalakjian/dataobjectaspagefilter": 20,
         "colymba/gridfield-bulk-editing-tools": 20,
         "ajshort/silverstripe-gridfieldextensions": 20,
         "silverstripe/googlesitemaps": 20
