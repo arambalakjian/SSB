@@ -13,9 +13,9 @@
 		</div>
 
 		<p class="content">$getContentPreview(250)</p>
-
-		<div class="read-more-bar">
-			<div class="read-more-button-container"><a href="$Link" class="read-more">Read More <i class="icon icon-chevron-right"></i></a></div>
-		</div>
 	</div>
+
+    <div class="read-more-bar">
+        <div class="read-more-button-container"><a href="$Link" class="read-more">Read More <i class="icon icon-chevron-right"></i></a></div>
+    </div>	
 </div>

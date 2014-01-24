@@ -1,6 +1,6 @@
 <?php
 
-class ViewListingPage extends DataObjectAsPageHolder
+class ViewListingPage extends FilteredListingPage
 {
 
 	/**
@@ -14,9 +14,21 @@ class ViewListingPage extends DataObjectAsPageHolder
 	}
 }
 
-class ViewListingPage_Controller extends DataObjectAsPageHolder_Controller
+class ViewListingPage_Controller extends FilteredListingPage_Controller
 {
 	static $item_class = 'View';
+	
+	private static $ajax_filter = false;	
+
+    private static $filter_settings = array(
+        'ViewTag' => array(
+            'Title' => 'Tags',   //Required - Define the Title of the Filter
+            'ClassName' => 'ViewTag', //Required - The Class of the category you are filtering by (the one that extends DataObjectAsPageCategory)
+            'Preposition' => 'with',          //Optional - Define the preposition in the filter message, e.g. Products IN x or y category (Defaults to "in")
+            'MultiSelect' => true,         //Optional - Select Multiple options at once (default is true)
+            'MatchAll' => true             //Optional - Match all the multi selected items, i.e. select a Product which has category x AND y. Requires a Many_Many or Has_Many
+        )
+    );	
 	
 	public function init()
 	{

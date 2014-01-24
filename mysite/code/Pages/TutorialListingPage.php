@@ -1,6 +1,6 @@
 <?php
 
-class TutorialListingPage extends DataObjectAsPageHolder
+class TutorialListingPage extends FilteredListingPage
 {
 
 	/**
@@ -14,9 +14,31 @@ class TutorialListingPage extends DataObjectAsPageHolder
 	}
 }
 
-class TutorialListingPage_Controller extends DataObjectAsPageHolder_Controller
+class TutorialListingPage_Controller extends FilteredListingPage_Controller
 {
-	static $item_class = 'Tutorial';
+	private static $item_class = 'Tutorial';
+
+	private static $allowed_actions = array(
+		'AddArticleIdeaForm'		
+	);
+	
+	private static $ajax_filter = false;	
+
+    private static $filter_settings = array(
+        'TutorialTags' => array(
+            'Title' => 'Tags',   //Required - Define the Title of the Filter
+            'ClassName' => 'TutorialTag', //Required - The Class of the category you are filtering by (the one that extends DataObjectAsPageCategory)
+            'Preposition' => 'with',          //Optional - Define the preposition in the filter message, e.g. Products IN x or y category (Defaults to "in")
+            'MultiSelect' => true,         //Optional - Select Multiple options at once (default is true)
+            'MatchAll' => true             //Optional - Match all the multi selected items, i.e. select a Product which has category x AND y. Requires a Many_Many or Has_Many
+        ),
+        'TutorialLevel' => array(
+            'Title' => 'Level',   //Required - Define the Title of the Filter
+            'ClassName' => 'TutorialLevel', //Required - The Class of the category you are filtering by (the one that extends DataObjectAsPageCategory)
+            'Preposition' => 'of' ,
+            'MultiSelect' => false        //Optional - Define the preposition in the filter message, e.g. Products IN x or y category (Defaults to "in")
+        )
+    );
 	
 	public function init()
 	{
@@ -54,10 +76,6 @@ class TutorialListingPage_Controller extends DataObjectAsPageHolder_Controller
 JS
 		);
 	}
-
-	static $allowed_actions = array(
-		'AddArticleIdeaForm'		
-	);
 
 	public function AddArticleIdeaForm()
 	{

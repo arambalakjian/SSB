@@ -4,25 +4,7 @@
 
 		<div class="snippet-list">
 			<div class="section-header-bar">
-				<div class="section-header-buttons">
-					<div class="section-header-button tag">
-						Tags <i class="icon-chevron-down right"></i>
-						<ul>
-							<li><a href="#">Tag link</a></li>
-							<li><a href="#">Tag link</a></li>
-							<li><a href="#">Tag link</a></li>
-							<li><a href="#">Tag link</a></li>
-						</ul>
-					</div><div class="section-header-button version margin-right">
-						Versions <i class="icon-chevron-down right"></i>
-						<ul>
-							<li><a href="#">Tag link</a></li>
-							<li><a href="#">Tag link</a></li>
-							<li><a href="#">Tag link</a></li>
-							<li><a href="#">Tag link</a></li>
-						</ul>
-					</div>
-				</div>
+                <% include FilterBar %>
 				<div class="section-title">
 					<h2>Snippets</h2>
 				</div>
