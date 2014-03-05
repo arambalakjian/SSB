@@ -1,4 +1,7 @@
 <div class="container">
+
+    $Alert
+
 	<div class="section-header-bar">
 		<div class="section-title">
 			<h2>$Title</h2>

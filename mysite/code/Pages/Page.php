@@ -94,6 +94,9 @@ class Page_Controller extends ContentController
 		//Add inline JS
 		Requirements::customScript(<<<JS
 			jQuery(document).ready(function() {
+					
+				jQuery('#MemberLoginForm_LoginForm').placeholderLabels();
+				
 				jQuery('#SearchForm_SearchForm_Search').clearField();
 
 				//show/hide the login form

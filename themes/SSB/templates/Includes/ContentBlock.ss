@@ -6,7 +6,7 @@
 			</div>
 		<% end_if %>
 		<div class="content <% if Image %>col-sm-8<% else %>col-sm-12<% end_if %>">
-			<h4>$Title</h4>	
+			<h2>$Title</h2>	
 			$Content
 		</div>
 	</div>

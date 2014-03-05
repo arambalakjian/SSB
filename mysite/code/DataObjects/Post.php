@@ -12,7 +12,6 @@ class Post extends DataObjectAsPage
 	);
 
 	static $has_many = array(
-		//'Comments' => 'PostComment',
 		'PostBlocks' => 'PostBlock'
 	);
 

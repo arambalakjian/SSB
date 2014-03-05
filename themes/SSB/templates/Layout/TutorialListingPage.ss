@@ -3,12 +3,8 @@
 	<div class="row">
 
 		<div class="tutorial-list">
-			<div class="section-header-bar">
-                <% include FilterBar %>
-				<div class="section-title">
-					<h2>$Title</h2>
-				</div>
-			</div>
+            <% include FilterBar %>
+            
 			<% loop Items %>
 				$ListingPageHTML
 			<% end_loop %>

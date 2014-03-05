@@ -8,15 +8,21 @@
 			<h2>Tutorials</h2>
 		</div>
 	</div>
-	<% with Item %>
-		<div class="row">
+
+	<div class="row">
+	    <% with $Item %>
 			<sidebar class="post-info">
+
 				<div class="image">
-					$Image.CroppedImage(200,200)
+					$Image.CroppedImage(250,250)
 					<i class="ssb-icon large $ClassName"></i>
 				</div>
 				<div class="share">
-
+                    <p>Share 
+                        <a href=""><i class="icon-twitter"></i></a>
+                        <a href=""><i class="icon-facebook"></i></a>
+                        <a href=""><i class="icon-linkedin"></i></a>
+                    </p>
 				</div>
 				<% if GitLink %>
 					<a class="github-link" href="$GitLink">View code on github</a>
@@ -33,7 +39,7 @@
 				<% end_with %>
 			</sidebar>
 			<article class="post-content">
-				<h3>$Title</h3>
+				<h1>$Title</h1>
 				<% include TutorialMetaInfo %>
 				<div class="intro">$Content</div>
 				<% if PostBlocks %>
@@ -41,8 +47,10 @@
 						$BlockHTML
 					<% end_loop %>
 				<% end_if %>
-				<% include Comments %>
+
 			</article>
-		</div>
-	<% end_with %>
+		<% end_with %>	
+	</div>
+        
+    <% include ItemComments %>  	
 </div>

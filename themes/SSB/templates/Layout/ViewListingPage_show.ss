@@ -41,8 +41,9 @@
 						$BlockHTML
 					<% end_loop %>
 				<% end_if %>
-				<% include Comments %>
 			</article>
 		</div>
 	<% end_with %>
+
+    <% include ItemComments %>          	
 </div>

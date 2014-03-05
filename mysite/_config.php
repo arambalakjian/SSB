@@ -20,6 +20,10 @@ Object::add_extension('SiteConfig', 'CustomSiteConfig');
 Object::add_extension('Image', 'ImageExtension');
 Object::add_extension('Member', 'UserExtension');
 
+//Comments
+DataObject::add_extension('Post', 'CommentableItem');
+Object::add_extension('FilteredListingPage_Controller', 'ItemComment_Controller');
+
 //add voting controller
 Director::addRules(100, array(
 	Vote_Controller::URLSegment => 'Vote_Controller'
@@ -32,3 +36,5 @@ if (isset($_GET['flush'])) {
 
 //Allow searching
 FulltextSearchable::enable();
+
+DataObjectAsPage::enable_versioning();

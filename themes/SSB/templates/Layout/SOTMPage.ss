@@ -1,54 +1,54 @@
-
 <div class="container full-post-page">
 	$Alert
-	<div class="section-header-bar">
-		<div class="section-header-buttons">
-			<a class="section-header-button red" href="{$Link}add"><i class="icon-desktop"></i> Submit your site</a>
-		</div>
-		<div class="section-title">
-			<h2>Awards</h2>
-		</div>
-	</div>
+    <div class="row">	
+    	<div class="section-header-bar">
+    		<div class="section-header-buttons">
+    			<a class="section-header-button red" href="{$Link}add"><i class="icon-desktop"></i> Submit your site</a>
+    		</div>
+    		<div class="section-title">
+    			<h2>Awards</h2>
+    		</div>
+    	</div>
 
-	<% if CurrentNominees %>
-		<div class="nominee-title">
-			<div class="image-container">
-				<i class="ssb-icon large red"></i>
-			</div>
-			<div class="title-text">
-				<h3>Nominees for $VotingMonth</h3>
-				<p class="closing-date">voting closes on the 1st of {$VotingMonth} at 12AM GMT</p>
-			</div>
-			<div class="results">
-				<a class="results-link" href="{$Link}voteresults">View results</a>
-			</div>
-		</div>
-		<div class="current-nominees">
-			<% loop getCurrentNominees(true) %>
-				<div class="nominee">
-					<div class="image-container">
-						$Image.CroppedImage(360,236)
-						<div class="overlay">
-							<div class="overlay-content">
-								<div class="buttons">
-									<% if AllowVote %>
-										<a class="button red" href="$VoteLink">Vote <i class="icon-thumbs-up"></i></a>
-									<% end_if %>
-									<a class="button blue" href="$SiteURL.URL" target="_BLANK">View site <i class="icon-external-link"></i></a>
-								</div>
-								<p class="description">$Description.LimitCharacters(220)</p>
-								<% with Member %>
-									<div class="author">submitted by <a class="member-link" href="{$ProfileLink}">$Name</a> $Image.CroppedImage(24,24)</div>
-								<% end_with %>
-							</div>
-						</div>
-					</div>
-					<h4>$Title</h4>
-				</div>
-			<% end_loop %>
-		</div>
-	<% end_if %>
-
+    	<% if CurrentNominees %>
+    		<div class="nominee-title">
+    			<div class="image-container">
+    				<i class="ssb-icon large red"></i>
+    			</div>
+    			<div class="title-text">
+    				<h3>Nominees for $VotingMonth</h3>
+    				<p class="closing-date">voting closes on the 1st of {$VotingMonth} at 12AM GMT</p>
+    			</div>
+    			<div class="results">
+    				<a class="results-link" href="{$Link}voteresults">View results</a>
+    			</div>
+    		</div>
+    		<div class="current-nominees">
+    			<% loop getCurrentNominees(true) %>
+    				<div class="nominee">
+    					<div class="image-container">
+    						$Image.CroppedImage(360,236)
+    						<div class="overlay">
+    							<div class="overlay-content">
+    								<div class="buttons">
+    									<% if AllowVote %>
+    										<a class="button red" href="$VoteLink">Vote <i class="icon-thumbs-up"></i></a>
+    									<% end_if %>
+    									<a class="button blue" href="$SiteURL.URL" target="_BLANK">View site <i class="icon-external-link"></i></a>
+    								</div>
+    								<p class="description">$Description.LimitCharacters(220)</p>
+    								<% with Member %>
+    									<div class="author">submitted by <a class="member-link" href="{$ProfileLink}">$Name</a> $Image.CroppedImage(24,24)</div>
+    								<% end_with %>
+    							</div>
+    						</div>
+    					</div>
+    					<h4>$Title</h4>
+    				</div>
+    			<% end_loop %>
+    		</div>
+    	<% end_if %>
+    </div>
 	<div class="row">
 
 		<div class="previous-winners">
@@ -105,3 +105,4 @@
 			<% end_if %>
 		</sidebar>
 	</div>
+    

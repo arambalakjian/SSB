@@ -5,7 +5,7 @@
 			<a class="section-header-button" href="$Link"><i class="icon-chevron-left"></i> Back</a>
 		</div>
 		<div class="section-title">
-			<h2>Tutorials</h2>
+			<h2>$Title</h2>
 		</div>
 	</div>
 	<% with Item %>
@@ -33,8 +33,9 @@
 				<% include SnippetMetaInfo %>
 				<div class="intro">$Content</div>
 				$GistEmbed
-				<% include Comments %>
 			</article>
 		</div>
 	<% end_with %>
+
+    <% include ItemComments %>      	
 </div>

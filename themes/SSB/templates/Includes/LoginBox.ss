@@ -8,6 +8,7 @@
 				</div>
 				<div class="ssb-login">
 					<p class="login-intro">Using your Email and Password</p>
+					$LoginForm
 				</div>
 			</div>
 		</div>

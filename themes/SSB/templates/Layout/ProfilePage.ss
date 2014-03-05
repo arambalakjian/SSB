@@ -1,4 +1,7 @@
 <div class="container">
+
+    $Alert
+
 	<div class="section-header-bar">
 		<div class="section-title">
 			<h2>$Title</h2>
@@ -23,7 +26,14 @@
 				<h3>$Name</h3>
 				<div class="member-info">
 					<% if Email %>
-						<p><i class="icon-envelope-alt"></i> <a href="mailto: {$Email}">$Email</a></p>
+                        <p><i class="icon-envelope-alt"></i> 
+                            <a href="mailto: {$Email}">$Email</a>
+                            <% if EmailValidated %>
+                                <span class="label label-success">Validated</span>
+                            <% else %>
+                                <span class="label label-info"><a href="$getSendValidationEmailLink">Validate</a></span>
+                            <% end_if %>
+                        </p>
 					<% end_if %>
 					<% if TwitterName %>
 						<p><i class="icon-twitter"></i> <a href="http://www.twitter.com/{$Twittername}" target="_BLANK">@{$TwitterName}</a></p>

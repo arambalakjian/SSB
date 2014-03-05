@@ -3,12 +3,7 @@
 	<div class="row">
 
 		<div class="view-list">
-			<div class="section-header-bar">
-                <% include FilterBar %>
-				<div class="section-title">
-					<h2 class="latest-section-title">Views</h2>
-				</div>
-			</div>
+            <% include FilterBar %>
 			<% loop Items %>
 				$ListingPageHTML
 			<% end_loop %>

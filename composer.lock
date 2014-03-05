@@ -124,12 +124,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "0e307890402a1a6a87729d56005d9a1fa5bb5c9e"
+                "reference": "41fe01c2a5d04a4b65604c708a6ca2fe17367fca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/0e307890402a1a6a87729d56005d9a1fa5bb5c9e",
-                "reference": "0e307890402a1a6a87729d56005d9a1fa5bb5c9e",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/41fe01c2a5d04a4b65604c708a6ca2fe17367fca",
+                "reference": "41fe01c2a5d04a4b65604c708a6ca2fe17367fca",
                 "shasum": ""
             },
             "require": {
@@ -158,20 +158,20 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-01-17 10:56:46"
+            "time": "2014-01-31 15:31:52"
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.8",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c"
+                "reference": "35a07647186a910b725fca9290b13ca2e265491a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
-                "reference": "c87cfc35882eb50df3eef1734bfa52fbcd6c782c",
+                "url": "https://api.github.com/repos/composer/installers/zipball/35a07647186a910b725fca9290b13ca2e265491a",
+                "reference": "35a07647186a910b725fca9290b13ca2e265491a",
                 "shasum": ""
             },
             "replace": {
@@ -201,20 +201,23 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "http://dontkry.com",
+                    "homepage": "https://github.com/shama",
                     "role": "Developer"
                 }
             ],
             "description": "A multi-framework Composer library installer",
             "homepage": "http://composer.github.com/installers/",
             "keywords": [
-                "TYPO3 CMS",
-                "TYPO3 Flow",
-                "TYPO3 Neos",
+                "Craft",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
                 "agl",
+                "annotatecms",
                 "cakephp",
                 "codeigniter",
                 "concrete5",
+                "croogo",
                 "drupal",
                 "elgg",
                 "fuelphp",
@@ -222,31 +225,36 @@
                 "joomla",
                 "kohana",
                 "laravel",
-                "li3",
                 "lithium",
+                "magento",
                 "mako",
+                "mediawiki",
                 "modulework",
                 "phpbb",
+                "piwik",
                 "ppi",
+                "shopware",
                 "silverstripe",
                 "symfony",
+                "typo3",
                 "wordpress",
-                "zend"
+                "zend",
+                "zikula"
             ],
-            "time": "2013-12-24 18:04:46"
+            "time": "2014-01-31 16:53:31"
         },
         {
             "name": "guzzle/guzzle",
-            "version": "v3.8.0",
+            "version": "v3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69"
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
-                "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
+                "reference": "4de0618a01b34aa1c8c33a3f13f396dcd3882eba",
                 "shasum": ""
             },
             "require": {
@@ -284,8 +292,8 @@
                 "phpunit/phpunit": "3.7.*",
                 "psr/log": "1.0.*",
                 "symfony/class-loader": "*",
-                "zendframework/zend-cache": "2.0.*",
-                "zendframework/zend-log": "2.0.*"
+                "zendframework/zend-cache": "<2.3",
+                "zendframework/zend-log": "<2.3"
             },
             "type": "library",
             "extra": {
@@ -295,8 +303,8 @@
             },
             "autoload": {
                 "psr-0": {
-                    "Guzzle\\Tests": "tests/",
-                    "Guzzle": "src/"
+                    "Guzzle": "src/",
+                    "Guzzle\\Tests": "tests/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -325,7 +333,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2013-12-05 23:39:20"
+            "time": "2014-01-28 22:29:15"
         },
         {
             "name": "knplabs/github-api",
@@ -523,12 +531,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git",
-                "reference": "a2297c43ef748025ddded140d4ad4320a88fd3ea"
+                "reference": "3b3742a1bc2cc14a1950304bc7dd533f9c66edbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/a2297c43ef748025ddded140d4ad4320a88fd3ea",
-                "reference": "a2297c43ef748025ddded140d4ad4320a88fd3ea",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/3b3742a1bc2cc14a1950304bc7dd533f9c66edbf",
+                "reference": "3b3742a1bc2cc14a1950304bc7dd533f9c66edbf",
                 "shasum": ""
             },
             "require": {
@@ -553,7 +561,7 @@
                 "seo",
                 "silverstripe"
             ],
-            "time": "2013-08-28 05:51:17"
+            "time": "2014-01-28 04:41:57"
         },
         {
             "name": "symfony/event-dispatcher",
