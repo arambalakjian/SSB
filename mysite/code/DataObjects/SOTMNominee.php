@@ -163,6 +163,10 @@ class SOTMNominee extends DataObject
 			}
 		}
 
-		return round((($this->Rating/$totalVotes)*100),1);
+		if($totalVotes > 0) 
+		{
+			return round((($this->Rating/$totalVotes)*100),1);
+		}
+		else return 0;
 	}
 }
