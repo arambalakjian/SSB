@@ -1,0 +1,47 @@
+---
+Name: mysite
+After: 'framework/*','cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SSViewer:
+  theme: 'SSB'
+SiteConfig:
+  extensions:
+    - CustomSiteConfig
+Image:
+  extensions:
+    - ImageExtension
+Member:
+  extensions:
+    - UserExtension
+Post:
+  extensions:
+    - CommentableItem
+FilteredListingPage_Controller:
+  extensions:
+    - ItemComment_Controller
+OpauthAuthenticator:
+  enabled_strategies:
+    - GitHubStrategy
+    - TwitterStrategy
+  opauth_settings:
+    Strategy:
+      Github:
+        client_id: '871acc530c1181685d3c'
+        client_secret: '1b22ececb2a157fe0cf289e3903c1f61d2174712'
+      Twitter:
+        key: 'BQw4i4z23LNeY4VdbOqYRQKUt'
+        secret: 'EXg9EfIamyGZv3hIgFvmtJguLPr3CEd9cd2aAxsRN8rgga5l4y'
+    security_salt: 'correct horse battery staple'
+OpauthIdentity:
+  member_mapper:
+    Github:
+      FirstName: ['OpauthResponseHelper', 'get_first_name']
+      Surname: ['OpauthResponseHelper', 'get_last_name']
+      Email: 'info.email'
+    Twitter:
+      FirstName: ['OpauthResponseHelper', 'get_first_name']
+      Surname: ['OpauthResponseHelper', 'get_last_name']
+      Locale: ['OpauthResponseHelper', 'get_twitter_locale']

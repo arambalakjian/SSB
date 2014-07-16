@@ -3,8 +3,23 @@ local-config.php
 /assets/Uploads
 /assets/_resampled
 /assets/_combinedfiles
-/themes/[THEME]/combinedfiles
+/themes/SSB/combinedfiles
 /silverstripe-cache
+_ss_environment.php
+
+# Modules to ignore #
+/public_html/cms
+/public_html/framework
+/public_html/gridfieldextensions
+/public_html/dataobjectaspage
+/public_html/dataobjectaspagefilter
+/public_html/dataobjectaspagecomments
+/public_html/googlesitemaps
+/public_html/gridfield-bulk-editing-tools
+/public_html/gridfieldextensions
+/public_html/silverstripe-utils
+/public_html/memberemailvalidator
+/public_html/silverstripe-opauth
 
 # Ignore these files in Assets #
 /assets/*.jpg
