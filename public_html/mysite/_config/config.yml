@@ -29,11 +29,11 @@ OpauthAuthenticator:
   opauth_settings:
     Strategy:
       Github:
-        client_id: '871acc530c1181685d3c'
-        client_secret: '1b22ececb2a157fe0cf289e3903c1f61d2174712'
+        client_id: '65712efa9de18a15fc98'
+        client_secret: '0a75f7002e8993b01d4d59efc322f52b6f793e67'
       Twitter:
-        key: 'BQw4i4z23LNeY4VdbOqYRQKUt'
-        secret: 'EXg9EfIamyGZv3hIgFvmtJguLPr3CEd9cd2aAxsRN8rgga5l4y'
+        key: 'zDglt0Syk4Odlk59V6cCjqsUw'
+        secret: 'tmuYIpyQHggu7Ke3wgfeDRb8DyFHJGagxJAuAzsSaiCNcC9mea'
     security_salt: 'correct horse battery staple'
 OpauthIdentity:
   member_mapper:

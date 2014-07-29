@@ -2,7 +2,9 @@
 
 class TutorialTag extends DataObjectAsPageCategory
 {
-	static $belongs_many_many = array(
+	private static $listing_page_class = "TutorialListingPage";
+	
+	private static $belongs_many_many = array(
 		'Tutorials' => 'Tutorial'
 	);
 }

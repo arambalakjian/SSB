@@ -47,14 +47,16 @@ class EditProfileForm extends Form
 
 		return new FieldList(
 			new HiddenField('MemberID', '', $member->ID),
+			new HeaderField('General', 'Account Details'),
 		    new TextField('FirstName', 'First Name'),
 		    new TextField('Surname', 'Surname'),
 		    new TextField('Username', '* Username'),
 		    new TextField('Email', '* Email'),
+		    new HeaderField('Pass', 'Password'),
 		    $passField,
+		    new HeaderField('Social', 'Public Profile'),
 		    new TextField('GithubName', 'Github Username'),
 		    new TextField('TwitterName', 'Twitter Username'),
-		    new TextField('LinkedInName', 'LinkedIn Username'),
 		    new TextField('Website', 'Website'),
 		    new TextareaField('Bio', 'Bio'),
 		    $imageField

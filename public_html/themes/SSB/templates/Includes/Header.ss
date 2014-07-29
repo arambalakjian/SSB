@@ -18,7 +18,7 @@
 				<div class="header-right">
 					<% if CurrentMember %>
 						<div class="profile-utility-dropdown">
-							<% with CurrentMember %>$Image.CroppedImage(42,42)<% end_with %><i class="icon-chevron-down"></i>
+							<% with CurrentMember %><% if Image %>$Image.CroppedImage(42,42)<% else %><img src="$Top.ThemeDir/images/male_silluete.png" alt="profie image" /><% end_if %><% end_with %><i class="icon-chevron-down"></i>
 							<ul class="utility-links">
 								<li><a href="{$PageType(ProfilePage).Link}">Profile</a></li>
 								<li><a href="/Security/Logout">Logout</a></li>

@@ -2,7 +2,9 @@
 
 class TutorialLevel extends DataObjectAsPageCategory
 {
-	static $has_many = array(
+	private static $listing_page_class = "TutorialListingPage";
+
+	private static $has_many = array(
 		'Tutorials' => 'Tutorial'
 	);
 }

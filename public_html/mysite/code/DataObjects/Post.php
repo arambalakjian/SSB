@@ -21,6 +21,7 @@ class Post extends DataObjectAsPage
 
 		$fields->removeByName('AuthorID');
 		$fields->removeByName('PostBlocks');
+		$fields->removeByName('ItemComments');
 
 		$fields->addFieldToTab('Root.Main', $dateField = new DateField('PublishDate', 'Publish Date'), 'Content');
 		$dateField->setConfig('showcalendar', true);

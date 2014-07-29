@@ -2,6 +2,234 @@
 *************************************************************
 *   TO: 
 *   FROM: 
+*   SUBJECT: MyMuswell - New Comment posted on A Sample View
+*************************************************************
+*   TIME: 29th Jul 2014 - 09:28:59
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    </head>
+    <body>
+    
+        <p><strong>A new comment has been posted on <a href="http://ssbits.local/views/show/a-sample-view">A Sample View</a> by Default Admin.</strong></p>
+        
+        <p></p>
+    
+        <p>Go to <a href="http://ssbits.local/views/show/a-sample-view">A Sample View</a> to reply</p>
+    </body>
+</html>
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: 
+*   FROM: 
+*   SUBJECT: MyMuswell - New Comment posted on Sample Tutorial
+*************************************************************
+*   TIME: 21st Jul 2014 - 17:02:24
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    </head>
+    <body>
+    
+        <p><strong>A new comment has been posted on <a href="http://ssbits.local/tutorials/show/sample-tutorial">Sample Tutorial</a> by Default Admin.</strong></p>
+        
+        <p></p>
+    
+        <p>Go to <a href="http://ssbits.local/tutorials/show/sample-tutorial">Sample Tutorial</a> to reply</p>
+    </body>
+</html>
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: 
+*   FROM: 
+*   SUBJECT: MyMuswell - New Comment posted on Sample Tutorial
+*************************************************************
+*   TIME: 21st Jul 2014 - 16:58:01
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: 
+*   FROM: 
+*   SUBJECT: MyMuswell - New Comment posted on Sample Tutorial
+*************************************************************
+*   TIME: 21st Jul 2014 - 16:57:37
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: hello@carboncrayon.com
+*   FROM: 
+*   SUBJECT: Please Validate your Email address
+*************************************************************
+*   TIME: 21st Jul 2014 - 16:14:39
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    </head>
+    <body>
+    
+        <p>Hi Default Admin</p>
+        
+        <p></p>
+        
+        <p><a href="http://ssbits.local/MemberEmailValidation_Controller/validateemail?code=6k7p032w62w814tift1z">Validate Email</a></p>
+
+    </body>
+</html>
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: hello@carboncrayon.com
+*   FROM: 
+*   SUBJECT: Please Validate your Email address
+*************************************************************
+*   TIME: 21st Jul 2014 - 16:14:30
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    </head>
+    <body>
+    
+        <p>Hi Default Admin</p>
+        
+        <p></p>
+        
+        <p><a href="http://ssbits.local/MemberEmailValidation_Controller/validateemail?code=6k7p032w62w814tift1z">Validate Email</a></p>
+
+    </body>
+</html>
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: hello@carboncrayon.com
+*   FROM: 
+*   SUBJECT: Please Validate your Email address
+*************************************************************
+*   TIME: 21st Jul 2014 - 16:13:41
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    </head>
+    <body>
+    
+        <p>Hi Default Admin</p>
+        
+        <p></p>
+        
+        <p><a href="http://ssbits.local/MemberEmailValidation_Controller/validateemail?code=6k7p032w62w814tift1z">Validate Email</a></p>
+
+    </body>
+</html>
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: hello@carboncrayon.com
+*   FROM: 
+*   SUBJECT: Please Validate your Email address
+*************************************************************
+*   TIME: 21st Jul 2014 - 16:13:30
+*************************************************************
+X-SilverStripeSite: mysite
+
+*************************************************************
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    </head>
+    <body>
+    
+        <p>Hi Default Admin</p>
+        
+        <p></p>
+        
+        <p><a href="http://ssbits.local/MemberEmailValidation_Controller/validateemail?code=6k7p032w62w814tift1z">Validate Email</a></p>
+
+    </body>
+</html>
+*************************************************************
+*   END OF EMAIL 
+*************************************************************
+
+
+
+
+
+*************************************************************
+*   TO: 
+*   FROM: 
 *   SUBJECT: MyMuswell - New Comment posted on A Tutorial 
 *************************************************************
 *   TIME: 05th Feb 2014 - 17:44:18

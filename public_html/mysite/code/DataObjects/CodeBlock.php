@@ -10,6 +10,8 @@ class CodeBlock extends PostBlock
 	public function getCMSFields()
 	{
 		$fields = parent::getCMSFields();
+		
+		$fields->addFieldToTab('Root.Main', new TextField('Title', 'Filename (include ".ext")'));
 
 		$fields->addFieldToTab('Root.Main', new TextareaField('Content', 'Content'));
 		$fields->addFieldToTab('Root.Main', new TextareaField('Caption', 'Caption'));

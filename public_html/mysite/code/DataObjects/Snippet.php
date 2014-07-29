@@ -10,13 +10,14 @@ class Snippet extends Post
 	);
 
 	static $many_many = array(
-		'SnippetTags' => 'SnippetTag'
+		'PostBlocks' => 'SnippetTag'
 	);
 
 	public function getCMSFields()
 	{
 		$fields = parent::getCMSFields();
 
+		$fields->removeByName('SnippetTags');
 		$fields->removeByName('SnippetTags');
 
 		$fields->addFieldToTab('Root.Main', new ReadOnlyField('GistID', 'Gist ID'), 'Content');
