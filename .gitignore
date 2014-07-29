@@ -30,7 +30,6 @@ _ss_environment.php
 # Always ignore these files #
 *.zip
 *.exe
-*.sql
 *.tar
 *.gzip
 *.doc
