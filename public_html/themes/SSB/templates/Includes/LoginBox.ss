@@ -5,6 +5,7 @@
 			<div class="row">
 				<div class="social-login">
 					<p class="login-intro">Using your twitter or github account</p>
+					$OpauthLoginForm
 				</div>
 				<div class="ssb-login">
 					<p class="login-intro">Using your Email and Password</p>

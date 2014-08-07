@@ -2,7 +2,7 @@
 	<div class="image hidden-xs">
 		<div class="title-circle">
 			Site of the month
-			<span class="month">$SOTMNominee.MonthNameShort</span>
+			<span class="month">$NominationMonth</span>
 		</div>
 		<i class="ssb-icon large $ClassName"></i>
 	</div>

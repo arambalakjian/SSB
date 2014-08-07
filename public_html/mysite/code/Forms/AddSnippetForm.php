@@ -37,35 +37,36 @@ class AddSnippetForm extends Form
 		$versionDropdown = new DropdownField('VersionID', 'Version', Version::get()->map('ID', 'Title'));
 		$versionDropdown->setEmptyString('Please select...');
 
-		$imageField = new UploadField('Image', 'Image');
-		$imageField->setCanAttachExisting(false);
-		$imageField->setCanPreviewFolder(false);
-		$imageField->setOverwriteWarning(false);
-		$imageField->setAllowedMaxFileNumber(1);
-		$imageField->setFileEditFields(null);
-		$imageField->setFolderName('Uploads/post-images');
+		// $imageField = new UploadField('Image', 'Image');
+		// $imageField->setCanAttachExisting(false);
+		// $imageField->setCanPreviewFolder(false);
+		// $imageField->setOverwriteWarning(false);
+		// $imageField->setAllowedMaxFileNumber(1);
+		// $imageField->setFileEditFields(null);
+		// $imageField->setFolderName('Uploads/post-images');
 
 		return new FieldList(
-			new LiteralField('OpenCol1', '<div class="snippet-details">'),
+			//new LiteralField('OpenCol1', '<div class="snippet-details">'),
 			new HeaderField('left', 'Snippet Details'),
 		    new TextField('Title', '* Title'),
+		    new TextField('GistLink', '* Gist URL'),
 		    new TextareaField('Content', 'Content'),
-		    new HiddenField('FileCount', 'FileCount', 1),
+		    //new HiddenField('FileCount', 'FileCount', 1),
 		    //$imageField,
 		    $versionDropdown,
-		    new CheckboxSetField('SnippetTags', 'Tags', SnippetTag::get()->map('ID', 'Title')->toArray()),
-		    new LiteralField('GistFilesOpen', '</div><div id="gist-files" class="snippet-files">'),
-		    new HeaderField('right', 'Snippet Files'),
-		    new TextField('FileName1', 'File Name'),
-		    new DropdownField('FileType1', 'File Type', $typeOptions),
-		    new TextareaField('FileContent1', 'File Content'),
-		    new LiteralField('GistFilesClose', '<span id="add-file" class="btn btn-primary">Add a file</span></div>')
+		    new CheckboxSetField('SnippetTags', 'Tags', SnippetTag::get()->map('ID', 'Title')->toArray())
+		    // new LiteralField('GistFilesOpen', '</div><div id="gist-files" class="snippet-files">'),
+		    // new HeaderField('right', 'Snippet Files'),
+		    // new TextField('FileName1', 'File Name'),
+		    // new DropdownField('FileType1', 'File Type', $typeOptions),
+		    // new TextareaField('FileContent1', 'File Content'),
+		    // new LiteralField('GistFilesClose', '<span id="add-file" class="btn btn-primary">Add a file</span></div>')
 		);
 	}
    
    	function getValidator()
 	{
-		return new RequiredFields('Title');
+		return new AddSnippetFormValidator('Title', 'GistLink');
 	}
    
    	function getJS($controller)
@@ -101,49 +102,68 @@ class AddSnippetForm extends Form
 		
 	}
    
-	function AddSnippet($data, $form) 
-	{      
-	  	$siteConfig = SiteConfig::current_site_config();
+	//  OLD ADD SNIPPET METHOD FOR ADDING GISTS DIRECTLY 
+
+	// function AddSnippet($data, $form) 
+	// {      
+	//   	$siteConfig = SiteConfig::current_site_config();
 	 	
-	 	//create a new gist
-		if($git = new Github\Client())
+	//  	//create a new gist
+	// 	if($git = new Github\Client())
+	// 	{
+	// 		$git->authenticate($siteConfig->GistAccountToken, null, Github\Client::AUTH_HTTP_TOKEN);
+
+	// 		//loop through the files
+	// 		$fileArray = array();
+	// 		for($count = 1; $count <= $data['FileCount']; $count++)
+	// 		{
+	// 		    $fileArray[$data['FileName'.$count] . $data['FileType'.$count]] = array(
+	// 		        'content' => $data['FileContent' . $count]
+	// 		    );
+	// 		}
+
+	// 		//compile the gist data to send
+	// 		$gistData = array(
+	// 		    'files' => $fileArray,
+	// 		    'public' => true,
+	// 		    'description' => $data['Title']
+	// 		); 
+	// 		if($gist = $git->api('gist')->create($gistData))
+	// 		{
+	// 			$snip = Snippet::create();
+	// 			$form->saveInto($snip);
+	// 			$snip->GistID = $gist['id'];
+	// 			$snip->GistLink = $gist['html_url'];
+
+	// 			if($memberId = Member::currentUserId())
+	// 			{
+	// 				$snip->AuthorID = $memberId;
+	// 			}
+
+	// 			if($snip->write())
+	// 			{
+	// 				return $this->success($form);
+	// 			}
+	// 		}
+	// 	}
+	// }  
+
+	function AddSnippet($data, $form) 
+	{   
+		$snip = Snippet::create();
+		$form->saveInto($snip);
+
+		if($memberId = Member::currentUserId())
 		{
-			$git->authenticate($siteConfig->GistAccountToken, null, Github\Client::AUTH_HTTP_TOKEN);
-
-			//loop through the files
-			$fileArray = array();
-			for($count = 1; $count <= $data['FileCount']; $count++)
-			{
-			    $fileArray[$data['FileName'.$count] . $data['FileType'.$count]] = array(
-			        'content' => $data['FileContent' . $count]
-			    );
-			}
-
-			//compile the gist data to send
-			$gistData = array(
-			    'files' => $fileArray,
-			    'public' => true,
-			    'description' => $data['Title']
-			); 
-			if($gist = $git->api('gist')->create($gistData))
-			{
-				$snip = Snippet::create();
-				$form->saveInto($snip);
-				$snip->GistID = $gist['id'];
-				$snip->GistLink = $gist['html_url'];
-
-				if($memberId = Member::currentUserId())
-				{
-					$snip->AuthorID = $memberId;
-				}
-
-				if($snip->write())
-				{
-					return $this->success($form);
-				}
-			}
+			$snip->AuthorID = $memberId;
 		}
-	}  
+
+		if($snip->writeToStage('Stage', 1))
+		{
+			$snip->publish('Stage', 'Live');
+			return $this->success($form);
+		}
+	}
 
 	public function success($form)
 	{

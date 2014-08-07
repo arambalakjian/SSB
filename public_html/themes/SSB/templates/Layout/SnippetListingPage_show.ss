@@ -15,7 +15,7 @@
 
 				</div>
 				<% if GistLink %>
-					<a class="github-link" href="$GistLink">View code on github</a>
+					<a class="github-link" href="$GistLink" target="_BLANK">View code on github</a>
 				<% end_if %>
 				<% if Author %>
 					<% with Author %>

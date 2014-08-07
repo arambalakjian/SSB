@@ -4,6 +4,9 @@
 
 		<div class="view-list">
             <% include FilterBar %>
+
+            <% include FilterMessage %>
+            
 			<% loop Items %>
 				$ListingPageHTML
 			<% end_loop %>

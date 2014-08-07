@@ -21,7 +21,7 @@ class ViewListingPage_Controller extends FilteredListingPage_Controller
 	private static $ajax_filter = false;	
 
     private static $filter_settings = array(
-        'ViewTag' => array(
+        'ViewTags' => array(
             'Title' => 'Tags',   //Required - Define the Title of the Filter
             'ClassName' => 'ViewTag', //Required - The Class of the category you are filtering by (the one that extends DataObjectAsPageCategory)
             'Preposition' => 'with',          //Optional - Define the preposition in the filter message, e.g. Products IN x or y category (Defaults to "in")

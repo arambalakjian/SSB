@@ -36,7 +36,7 @@
                 <% if $ParentCommentID = 0 %>
                     <a data-toggle="collapse" data-parent=".links" href="#reply-form-$ID" class="reply-link collapsed btn" title="Reply to this comment">Reply</a>
                     <% if $Replies %>
-                        <a data-toggle="collapse" data-parent=".links" href="#replies-$ID" class="reply-link btn  btn-primary" title="Reply to this comment">Hide relplies <i class="icon-angle-up"></i></a>
+                        <a data-toggle="collapse" data-parent=".links" href="#replies-$ID" class="reply-link btn  btn-primary" title="Reply to this comment">Hide replies <i class="icon-angle-up"></i></a>
                     <% end_if %>
                 <% end_if %>
             </p>

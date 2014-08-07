@@ -19,6 +19,7 @@ _ss_environment.php
 /public_html/silverstripe-utils
 /public_html/memberemailvalidator
 /public_html/silverstripe-opauth
+/public_html/vendor
 
 # Ignore these files in Assets #
 /assets/*.jpg

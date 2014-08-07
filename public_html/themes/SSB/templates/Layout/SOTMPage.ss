@@ -17,7 +17,7 @@
     			</div>
     			<div class="title-text">
     				<h3>Nominees for $VotingMonth</h3>
-    				<p class="closing-date">voting closes on the 1st of {$VotingMonth} at 12AM GMT</p>
+    				<p class="closing-date">voting closes on the 1st of {$NextVotingMonth} at 12AM GMT</p>
     			</div>
     			<div class="results">
     				<a class="results-link" href="{$Link}voteresults">View results</a>
@@ -79,7 +79,7 @@
 							</div>
 							<div class="site-details">
 								<p class="date">$MonthName</p>
-								<h3><a class="site-name" href="$SiteURL">$Title</a></h3>
+								<h3><a class="site-name" href="$SiteURL.URL">$Title</a></h3>
 								<p class="description">$Description</p>
 								<% with Member %>
 									<p class="author">$Image.CroppedImage(24,24) <a class="member-link" href="{$ProfileLink}">$Name</a></p>
@@ -99,7 +99,7 @@
 			<% if RecentSites %>
 				<% loop RecentSites %>
 					<div class="nominee">
-						$Image.croppedImage(85,54)<a href="$SiteURL" target="_BLANK">$Title</a>
+						$Image.croppedImage(85,54)<a href="$SiteURL.URL" target="_BLANK">$Title</a>
 					</div>
 				<% end_loop %>
 			<% end_if %>

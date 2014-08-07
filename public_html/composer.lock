@@ -1,7 +1,8 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "47e91b3f675e104f70e162f12f5072be",
     "packages": [
@@ -169,12 +170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/colymba/GridFieldBulkEditingTools.git",
-                "reference": "c25dcbfdeabf83b3087d32b2341b06f9b02ff50e"
+                "reference": "7d749774914d8321aa7b568eee7329809c96d7a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/c25dcbfdeabf83b3087d32b2341b06f9b02ff50e",
-                "reference": "c25dcbfdeabf83b3087d32b2341b06f9b02ff50e",
+                "url": "https://api.github.com/repos/colymba/GridFieldBulkEditingTools/zipball/7d749774914d8321aa7b568eee7329809c96d7a7",
+                "reference": "7d749774914d8321aa7b568eee7329809c96d7a7",
                 "shasum": ""
             },
             "require": {
@@ -203,20 +204,20 @@
                 "gridfield bulk upload",
                 "silverstripe"
             ],
-            "time": "2014-07-09 12:46:08"
+            "time": "2014-07-24 11:29:03"
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.15",
+            "version": "v1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "8e6a72a78f6cfd537fde3350720dfdc9ae3c5621"
+                "reference": "033679ad3cfc5ab759f9ed2a58881aeef13c342b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/8e6a72a78f6cfd537fde3350720dfdc9ae3c5621",
-                "reference": "8e6a72a78f6cfd537fde3350720dfdc9ae3c5621",
+                "url": "https://api.github.com/repos/composer/installers/zipball/033679ad3cfc5ab759f9ed2a58881aeef13c342b",
+                "reference": "033679ad3cfc5ab759f9ed2a58881aeef13c342b",
                 "shasum": ""
             },
             "replace": {
@@ -247,8 +248,7 @@
                 {
                     "name": "Kyle Robinson Young",
                     "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama",
-                    "role": "Developer"
+                    "homepage": "https://github.com/shama"
                 }
             ],
             "description": "A multi-framework Composer library installer",
@@ -283,6 +283,7 @@
                 "phpbb",
                 "piwik",
                 "ppi",
+                "puppet",
                 "roundcube",
                 "shopware",
                 "silverstripe",
@@ -292,7 +293,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-06-23 16:25:28"
+            "time": "2014-07-21 15:54:34"
         },
         {
             "name": "guzzle/guzzle",
@@ -726,12 +727,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git",
-                "reference": "3b3742a1bc2cc14a1950304bc7dd533f9c66edbf"
+                "reference": "198a850f8dfb65751d0ae20c6576bc4fa2fd0608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/3b3742a1bc2cc14a1950304bc7dd533f9c66edbf",
-                "reference": "3b3742a1bc2cc14a1950304bc7dd533f9c66edbf",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/198a850f8dfb65751d0ae20c6576bc4fa2fd0608",
+                "reference": "198a850f8dfb65751d0ae20c6576bc4fa2fd0608",
                 "shasum": ""
             },
             "require": {
@@ -756,7 +757,7 @@
                 "seo",
                 "silverstripe"
             ],
-            "time": "2014-01-28 04:41:57"
+            "time": "2014-07-17 22:16:18"
         },
         {
             "name": "symfony/event-dispatcher",

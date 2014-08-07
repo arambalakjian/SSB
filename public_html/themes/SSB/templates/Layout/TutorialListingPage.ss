@@ -4,6 +4,8 @@
 
 		<div class="tutorial-list">
             <% include FilterBar %>
+
+            <% include FilterMessage %>
             
 			<% loop Items %>
 				$ListingPageHTML

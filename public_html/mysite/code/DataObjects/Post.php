@@ -15,6 +15,9 @@ class Post extends DataObjectAsPage
 		'PostBlocks' => 'PostBlock'
 	);
 
+	static $plural_name = "posts";
+	static $singular_name = "post";
+
 	public function getCMSFields()
 	{
 		$fields = parent::getCMSFields();

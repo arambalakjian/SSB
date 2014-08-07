@@ -8,13 +8,29 @@ class SOTMPost extends Post
 
 	public function Link($action = null)
 	{
-		if($site = $this->SOTMNominee())
+		//get the site of the month page page
+		if($page = SOTMPage::get()->First())
 		{
-			//get the site of the month page page
-			if($page = SOTMPage::get()->First())
+			if($this->SOTMNomineeID && $site = $this->SOTMNominee())
 			{
 				return $page->Link() . 'show/' . $site->Year . '/' . $site->Month;
 			}
+			else return $page->Link();
+		}
+	}
+
+	/**
+	 * get the month off the nominations
+	 */
+	public function getNominationMonth()
+	{
+		if($this->SOTMNomineeID)
+		{
+			return $this->SOTMNominee()->MonthNameShort;
+		}
+		else 
+		{
+			return date('M y', strtotime($this->PublishDate));
 		}
 	}
 

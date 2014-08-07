@@ -22,6 +22,20 @@ class SOTMNominee extends DataObject
 		'SiteVotes' => 'SiteVote'
 	);
 
+	static $searchable_fields = array(
+		'Title',
+		'Accepted',
+		'Winner'
+	);
+
+	static $summary_fields = array(
+		'Year',
+		'Month',
+		'Title',
+		'Description',
+		'SiteURL'		
+	);
+
 	public function getCMSFields()
 	{
 		$fields = parent::getCMSFields();

@@ -13,6 +13,7 @@ class SnippetListingPage_Controller extends FilteredListingPage_Controller
 		'add',
 		'edit',
 		'AddSnippetForm',
+		'EditSnippetForm',
 		'filefields'
 	);
 
@@ -29,7 +30,7 @@ class SnippetListingPage_Controller extends FilteredListingPage_Controller
         'Version' => array(
             'Title' => 'Version',   //Required - Define the Title of the Filter
             'ClassName' => 'Version', //Required - The Class of the category you are filtering by (the one that extends DataObjectAsPageCategory)
-            'Preposition' => 'of' ,
+            'Preposition' => 'for version' ,
             'MultiSelect' => false        //Optional - Define the preposition in the filter message, e.g. Products IN x or y category (Defaults to "in")
         )
     );
@@ -52,6 +53,10 @@ JS
 	{
 	    return new AddSnippetForm($this, 'AddSnippetForm');
 	}
+	public function EditSnippetForm() 
+	{
+		return new EditSnippetForm($this, 'EditSnippetForm');
+	}
 
 	public function Success()
 	{
@@ -67,6 +72,25 @@ JS
 			);
 
 			return $this->customise($data)->renderWith(array('GistFileTemplate'));
+		}
+	}
+
+	/**
+	 * check whether a member is allowed to edit a snippet 
+	 * 
+	 * @return Boolean
+	 */
+	public function getCanEditSnippet()
+	{
+		if($snippet = $this->getCurrentItem())
+		{
+			if($memberID = Member::currentUserId())
+			{
+				if($memberID == $snippet->AuthorID)
+				{
+					return true;
+				}
+			}
 		}
 	}
 

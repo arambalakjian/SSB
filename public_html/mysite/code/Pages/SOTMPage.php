@@ -36,7 +36,19 @@ class SOTMPage extends Page
 	 */
 	public function getRecentSites($limit = 8)
 	{
-		return SOTMNominee::get()->sort('Created', 'DESC')->limit($limit);
+		return SOTMNominee::get()->filter('winner', false)->sort('Created', 'DESC')->limit($limit);
+	}
+
+	/**
+	 * get the current month 
+	 *  
+	 * @return Int 
+	 */
+	public function getCurrentMonth()
+	{
+		$month = date('n');
+		$year = date('Y');
+		return mktime(0, 0, 0, $month, 1, $year);
 	}
 
 	/**
@@ -46,14 +58,17 @@ class SOTMPage extends Page
 	 */
 	public function getVotingMonth($format = 'F Y')
 	{
-		$month = date('n');
-		$year = date('Y');
-		if($month == 12)
-		{
-			$month = 1;
-		}
-		else $month = $month++;
-		return date($format, mktime(0, 0, 0, $month, 1, $year));
+		return date($format, $this->getCurrentMonth());
+	}
+
+	/**
+	 * get the next month string 
+	 * 
+	 * @return String
+	 */
+	public function getNextVotingMonth($format = 'F Y')
+	{
+		return date($format, strtotime('+1 month', $this->getCurrentMonth()));
 	}
 }
 

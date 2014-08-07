@@ -5,12 +5,16 @@
 			<a class="section-header-button" href="$Link"><i class="icon-chevron-left"></i> Back</a>
 		</div>
 		<div class="section-title">
-			<h2>Create a new snippet</h2>
+			<h2>Edit <% with CurrentItem %>$Title<% end_with %></h2>
 		</div>
 	</div>
-	<div class="snippet-form-container">
-		<div class="snippet-details">
-			$AddSnippetForm
+	<% if CanEditSnippet %>
+		<div class="snippet-form-container">
+			<div class="snippet-details">
+				$EditSnippetForm
+			</div>
 		</div>
-	</div>
+	<% else %>
+		<p>Sorry, you don't have permission to edit this snippet.</p>
+	<% end_if %>
 </div>

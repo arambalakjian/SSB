@@ -46,6 +46,7 @@ class EditProfileForm extends Form
 		$passField->canBeEmpty = true;
 
 		return new FieldList(
+			new LiteralField('colleft', '<div class="edit-account-details">'),
 			new HiddenField('MemberID', '', $member->ID),
 			new HeaderField('General', 'Account Details'),
 		    new TextField('FirstName', 'First Name'),
@@ -54,12 +55,14 @@ class EditProfileForm extends Form
 		    new TextField('Email', '* Email'),
 		    new HeaderField('Pass', 'Password'),
 		    $passField,
+		    new LiteralField('colright', '</div><div class="edit-profile-details">'),
 		    new HeaderField('Social', 'Public Profile'),
 		    new TextField('GithubName', 'Github Username'),
 		    new TextField('TwitterName', 'Twitter Username'),
 		    new TextField('Website', 'Website'),
 		    new TextareaField('Bio', 'Bio'),
-		    $imageField
+		    $imageField,
+		    new LiteralField('colend', '</div>')
 		);
 	}
    

@@ -8,7 +8,8 @@ class Vote_Controller extends Controller
 	static $allowed_actions = array(
 		'article',
 		'site',
-		'sitewinner'
+		'sitewinner',
+		'createreminder'
 	);
 	
 	/**
@@ -114,8 +115,22 @@ class Vote_Controller extends Controller
 			$post->Title = "Site of the Month: " . $winner->getMonthName();
 			$post->SOTMNomineeID = $winner->ID;
 			$post->PublishDate = date('Y-m-d H:i:s');
-			$post->write();
+			$post->writeToStage('Stage', 1);
+			$post->publish('Stage', 'Live');
 		}
+	}
+
+	/**
+	 * create a 1 week reminder post for voting
+	 */
+	public function createreminder()
+	{
+		$post = SOTMPost::create();
+		$post->Title = date('F y') . " Nominations 1 Week Left to Vote";
+		$post->Content = "Voting for " . date('F') . "s Site of the Month will be closing in a weeks time so vote for your favourite now!";
+		$post->PublishDate = date('Y-m-d H:i:s');
+		$post->writeToStage('Stage', 1);
+		$post->publish('Stage', 'Live');
 	}
 
 	/**

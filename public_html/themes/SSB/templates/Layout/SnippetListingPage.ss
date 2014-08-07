@@ -4,6 +4,9 @@
 
 		<div class="snippet-list">
 			<% include FilterBar %>
+
+            <% include FilterMessage %>
+            
 			<% loop Items %>
 				$ListingPageHTML
 			<% end_loop %>

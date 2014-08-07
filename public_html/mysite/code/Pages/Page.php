@@ -50,6 +50,9 @@ class Page extends SiteTree {
 
 class Page_Controller extends ContentController 
 {
+	private static $allowed_actions = array(
+		'OpauthLoginForm'
+	);
 	
 	function init() 
 	{
@@ -113,15 +116,29 @@ class Page_Controller extends ContentController
 					jQuery(this).find('.utility-links').slideToggle();
 				});
 				//show hide the filter buttons
-				jQuery('.section-header-button').on('click', function(){
+				jQuery('.section-header-filter-button').on('click', function(){
 					jQuery(this).find('i').toggleClass('icon-chevron-down');
 					jQuery(this).find('i').toggleClass('icon-chevron-up');
-					jQuery(this).find('ul').slideToggle();
+				});
+				//change show/hide reply button text
+				jQuery('.reply-link').on('click', function(){
+					var replies = jQuery(this).attr('href').split('#');
+					if(jQuery('#' + replies[1]).is(':visible'))
+					{
+						jQuery(this).html('Show Replies <i class="icon-chevron-down"></i>');
+					}
+					else jQuery(this).html('Hide Replies <i class="icon-chevron-up"></i>');
 				});
 			});
 JS
 		);
 
+	}
+
+
+	public function OpauthLoginForm()
+	{
+		return new CustomOpauthLoginForm($this, 'OpauthLoginForm');
 	}
 
 	/*

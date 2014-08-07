@@ -10,7 +10,7 @@ class Snippet extends Post
 	);
 
 	static $many_many = array(
-		'PostBlocks' => 'SnippetTag'
+		'SnippetTags' => 'SnippetTag'
 	);
 
 	public function getCMSFields()
@@ -18,10 +18,9 @@ class Snippet extends Post
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName('SnippetTags');
-		$fields->removeByName('SnippetTags');
 
-		$fields->addFieldToTab('Root.Main', new ReadOnlyField('GistID', 'Gist ID'), 'Content');
-		$fields->addFieldToTab('Root.Main', new ReadOnlyField('GistLink', 'Gist Link'), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('GistID', 'Gist ID'), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('GistLink', 'Gist Link'), 'Content');
 
 		$tagField = new CheckboxSetField('SnippetTags', 'Tags', SnippetTag::get()->sort('Title', 'ASC')->map('ID', 'Title'));
 		$fields->addFieldToTab('Root.Tags', $tagField);
@@ -141,6 +140,15 @@ class Snippet extends Post
 	}
 
 
+	public function onBeforeWrite()
+	{
+		if(substr($this->GistLink, -4) == '.git')
+		{
+			$this->GistLink = substr($this->GistLink, 0, -4);
+		}
+		parent::onBeforeWrite();
+	}
+
 	public function onAfterWrite()
 	{
 		parent::onAfterWrite();	
@@ -149,7 +157,7 @@ class Snippet extends Post
 	}
 	public function onAfterDelete()
 	{
-		parent::onAfterWrite();	
+		parent::onAfterDelete();	
 
 		$this->Author()->updateSnippetCount();
 	}
