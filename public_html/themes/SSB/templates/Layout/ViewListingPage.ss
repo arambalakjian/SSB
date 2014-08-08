@@ -18,7 +18,7 @@
 					<span class="hashtag visible-lg">#silverstripe</span>
 				</div>
 			</div>
-			<% include Tweet %>
+			$TwitterFeed
 		</sidebar>
 	</div>
 </div>
