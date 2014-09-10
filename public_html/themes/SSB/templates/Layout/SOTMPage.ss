@@ -99,7 +99,7 @@
 			<% if RecentSites %>
 				<% loop RecentSites %>
 					<div class="nominee">
-						$Image.croppedImage(85,54)<a href="$SiteURL.URL" target="_BLANK">$Title</a>
+						<a href="$SiteURL.URL" target="_BLANK">$Image.croppedImage(85,54) $Title</a>
 					</div>
 				<% end_loop %>
 			<% end_if %>

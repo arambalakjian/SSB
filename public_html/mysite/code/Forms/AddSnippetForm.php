@@ -157,6 +157,11 @@ class AddSnippetForm extends Form
 		{
 			$snip->AuthorID = $memberId;
 		}
+		else
+		{
+			Page_Controller::setAlert('You need to be logged in to submit a snippet.', 'danger');
+			return $form->controller->redirect($form->controller->Link());
+		}
 
 		if($snip->writeToStage('Stage', 1))
 		{

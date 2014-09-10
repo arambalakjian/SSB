@@ -11,6 +11,12 @@ class PostBlock extends DataObject
 		'Post' => 'Post'
 	);
 
+	static $summary_fields = array(
+		'ClassName' => 'Class',
+		'Title' => 'Title',
+		'ContentPreview' => 'Content'		
+	);
+
 	static $default_sort = 'Sort';
 
 	public function getCMSFields()
@@ -23,6 +29,16 @@ class PostBlock extends DataObject
 		$fields->addFieldToTab('Root.Main', new TextField('Title', 'Title'));
 
 		return $fields;
+	}
+
+	/**
+	 * get a preview of the content for the block 
+	 * 
+	 * @return String
+	 */
+	public function ContentPreview()
+	{
+		return null;
 	}
 
 	/**

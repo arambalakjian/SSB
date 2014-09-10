@@ -1,9 +1,10 @@
+.vagrant
 /vendor
 local-config.php
-/assets/Uploads
-/assets/_resampled
-/assets/_combinedfiles
-/themes/SSB/combinedfiles
+/public_html/assets/Uploads
+/public_html/assets/_resampled
+/public_html/assets/_combinedfiles
+/public_html/themes/SSB/combinedfiles
 /silverstripe-cache
 _ss_environment.php
 
@@ -22,11 +23,11 @@ _ss_environment.php
 /public_html/vendor
 
 # Ignore these files in Assets #
-/assets/*.jpg
-/assets/*.jpeg
-/assets/*.png
-/assets/*.gif
-/assets/*.html
+/public_html/assets/*.jpg
+/public_html/assets/*.jpeg
+/public_html/assets/*.png
+/public_html/assets/*.gif
+/public_html/assets/*.html
 
 # Always ignore these files #
 *.zip

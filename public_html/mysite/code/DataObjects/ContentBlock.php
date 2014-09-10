@@ -23,4 +23,15 @@ class ContentBlock extends PostBlock
 
 		return $fields;
 	}
+
+	/**
+	 * get a preview of the content for the block 
+	 * 
+	 * @return String
+	 */
+	public function ContentPreview()
+	{
+		$base = strip_tags($this->Content);
+		return substr($base, 0, 150);
+	}
 }

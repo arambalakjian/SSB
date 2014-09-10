@@ -10,7 +10,15 @@
 	</div>
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3">
-			$AddSiteForm
+
+			<% if CurrentMember %>
+				$AddSiteForm
+			<% else %>
+				<div class="login-to-submit">
+					You need to be <a href="{$BaseHref}Security/Login">signed in</a> to submit a site.
+				</div>
+			<% end_if %>
+			
 		</div>
 	</div>
 </div>

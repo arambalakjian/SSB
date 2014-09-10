@@ -82,6 +82,11 @@ class AddSiteForm extends Form
 				return $this->success($form);
 			}
 		}
+		else 
+		{
+			Page_Controller::setAlert('You need to be logged in to submit a site.', 'danger');
+			return $form->controller->redirect($form->controller->Link());
+		}
 	}  
 
 	public function success($form)

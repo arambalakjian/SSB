@@ -22,11 +22,11 @@ class Tutorial extends Post
 
 		$fields->removeByName('TutorialTags');
 
-		$fields->addFieldToTab('Root.Main', new TextField('GitLink', 'Git Link'));
+		$fields->addFieldToTab('Root.Main', new TextField('GitLink', 'Git Link'), 'Content');
 
 		$levelField = new DropdownField('TutorialLevelID', 'Level', TutorialLevel::get()->map('ID', 'Title'));
 		$levelField->setEmptyString('Please select...');
-		$fields->addFieldToTab('Root.Main', $levelField);
+		$fields->addFieldToTab('Root.Main', $levelField, 'Content');
 
 		$tagField = new CheckboxSetField('TutorialTags', 'Tags', TutorialTag::get()->sort('Title', 'ASC')->map('ID', 'Title'));
 		$fields->addFieldToTab('Root.Tags', $tagField);

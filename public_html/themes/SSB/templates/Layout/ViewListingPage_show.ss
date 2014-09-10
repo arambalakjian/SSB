@@ -33,7 +33,7 @@
 				<% end_with %>
 			</sidebar>
 			<article class="post-content">
-				<h3>$Title</h3>
+				<h1>$Title</h1>
 				<% include ViewMetaInfo %>
 				<div class="intro">$Content</div>
 				<% if PostBlocks %>

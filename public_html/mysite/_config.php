@@ -18,10 +18,10 @@ DataObjectAsPage::enable_versioning();
 
 Object::add_extension('ViewListingPage', 'TwitterFeedExtension');
 
-TwitterFeedExtension::$twitter_cache_enabled = false; //optional
+TwitterFeedExtension::$twitter_cache_enabled = true; //optional
 
-TwitterFeedExtension::$twitter_cache_key = ''; //optional - required if $twitter_cache_enabled is true
-TwitterFeedExtension::$twitter_cache_id = ''; //optional - required if $twitter_cache_enabled is true
+TwitterFeedExtension::$twitter_cache_key = 'LL4fB4ioRJ'; //optional - required if $twitter_cache_enabled is true
+TwitterFeedExtension::$twitter_cache_id = 'DRgxVWiclR'; //optional - required if $twitter_cache_enabled is true
 
 TwitterFeedExtension::$twitter_consumer_key = 'zDglt0Syk4Odlk59V6cCjqsUw'; //required
 TwitterFeedExtension::$twitter_consumer_secret = 'tmuYIpyQHggu7Ke3wgfeDRb8DyFHJGagxJAuAzsSaiCNcC9mea'; //required

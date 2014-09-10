@@ -19,7 +19,13 @@
 				</div>
 			</div>
 			<div class="submit-idea-container">
-				$AddArticleIdeaForm
+				<% if CurrentMember %>
+					$AddArticleIdeaForm
+				<% else %>
+					<div class="login-to-submit">
+					You need to be <a href="{$BaseHref}Security/Login">signed in</a> to submit an idea.
+				</div>
+				<% end_if %>
 			</div>
 			<% loop ArticleIdeas %>
 				<% include ArticleIdeaListingPageContent %>
