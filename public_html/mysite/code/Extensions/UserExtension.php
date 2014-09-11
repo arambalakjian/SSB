@@ -100,7 +100,7 @@ class UserExtension extends DataExtension {
    		if(!$this->owner->RetainContentOnDelete)
    		{
    			//delete snippets
-   			if($snips = $this->Snippets())
+   			if($snips = $this->owner->Snippets())
    			{
    				foreach($snips as $snip)
    				{
@@ -108,7 +108,7 @@ class UserExtension extends DataExtension {
    				}
    			}
    			//delete SOTM Nominees
-   			if($nominees = $this->SOTMNominees())
+   			if($nominees = $this->owner->SOTMNominees())
    			{
    				foreach($nominees as $nominee)
    				{
@@ -116,7 +116,7 @@ class UserExtension extends DataExtension {
    				}
    			}
    			//delete ArticleIdeas
-   			if($ideas = $this->ArticleIdeas())
+   			if($ideas = $this->owner->ArticleIdeas())
    			{
    				foreach($ideas as $idea)
    				{
@@ -124,7 +124,7 @@ class UserExtension extends DataExtension {
    				}
    			}
    			//delete ArticleVotes
-   			if($votes = $this->ArticleVotes())
+   			if($votes = $this->owner->ArticleVotes())
    			{
    				foreach($votes as $vote)
    				{
@@ -132,7 +132,7 @@ class UserExtension extends DataExtension {
    				}
    			}
    			//delete Comments
-   			if($comments = $this->ItemComments())
+   			if($comments = $this->owner->ItemComments())
    			{
    				foreach($comments as $comment)
    				{
