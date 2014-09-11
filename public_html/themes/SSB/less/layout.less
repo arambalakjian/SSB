@@ -44,6 +44,11 @@ body {
 	.font-size(@font-size-base);
 }
 
+//general page typography
+.typography {
+	color: @black;
+}
+
 // Header 
 // --------------------/
 .header {
@@ -100,6 +105,18 @@ body {
 					background: @navbar-default-border;
 				}
 			}
+
+			&.current {
+				a {
+					background-color: @brand-primary;
+					color: @white;
+
+					&:hover {
+						background: @brand-primary;
+						color: @white;
+					}
+				}
+			}
 		}
 	}
 	.sign-in-button {
@@ -150,7 +167,8 @@ body {
     			list-style-type: none;
 
     			a {
-    				padding: 20px 30px;
+    				positin: relative;
+    				padding: 20px 30px 20px 45px;
     				display: block;
     				color: @white;
     				text-align: center;
@@ -160,6 +178,11 @@ body {
     				&:hover {
     					background: lighten(@brand-primary, 10%);
     					text-decoration: none;
+    				}
+
+    				i {
+    					position: absolute;
+    					left: 30px;
     				}
     			}
     		}
@@ -569,7 +592,8 @@ body {
 		list-style-type: none;
 
 		li {
-			display: inline;
+			display: inline-block;
+			margin: 5px 0;
 			padding: 3px;
 
 			a {
@@ -835,12 +859,16 @@ body {
 
 		.image {
 			.make-sm-column(3);
+			img {
+				width: 100%;
+			}
 		}
 		.details {
 			.make-sm-column(9);
+			padding-left: 0;
 
 			p {
-				margin: 5px 0;
+				margin: 0 0 5px;
 			}
 			.name{
 				color: @black;
@@ -849,9 +877,7 @@ body {
 		}
 	}
 	.title {
-		margin: 15px 0;
-	}
-	.description{
+		margin: 5px 0;
 		color: @black;
 		.font-size(18);
 	}
@@ -931,10 +957,10 @@ body {
 			overflow: hidden;
 
 			.handle {
-				float: left;
+				display: block;
 			}
 			.time {
-				float: right;
+				display:block;
 				color: @black;
 			}
 		}
@@ -993,6 +1019,7 @@ body {
 	}
 	.caption {
 		margin: 5px 0;
+		.font-size(14);
 		color: @gray-darker;
 		font-style: italic;
 	}

@@ -26,7 +26,7 @@ class AddSiteForm extends Form
    
    	function getInputFields()
 	{
-		$imageField = new UploadField('Image', 'Image');
+		$imageField = new UploadField('Image', 'Screenshot of site (360px x 236px, no browser)');
 		$imageField->setCanAttachExisting(false);
 		$imageField->setCanPreviewFolder(false);
 		$imageField->setOverwriteWarning(false);

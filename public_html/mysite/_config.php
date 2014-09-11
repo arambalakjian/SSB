@@ -15,6 +15,9 @@ GD::set_default_quality(95);
 
 DataObjectAsPage::enable_versioning();
 
+//enable the search
+FulltextSearchable::enable();
+
 
 Object::add_extension('ViewListingPage', 'TwitterFeedExtension');
 

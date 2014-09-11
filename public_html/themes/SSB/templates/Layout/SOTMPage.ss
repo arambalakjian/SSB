@@ -50,14 +50,14 @@
     	<% end_if %>
     </div>
 	<div class="row">
-
-		<div class="previous-winners">
-			<div class="section-header-bar small hidden-xs">
-				<div class="section-title left">
-					<h3>Previous Winners</h3>
+	
+		<% if Winners %>
+			<div class="previous-winners">
+				<div class="section-header-bar small hidden-xs">
+					<div class="section-title left">
+						<h3>Previous Winners</h3>
+					</div>
 				</div>
-			</div>
-			<% if Winners %>
 				<% loop Winners %>
 					<div class="nominee">
 						<div class="row">
@@ -88,8 +88,8 @@
 						</div>
 					</div>
 				<% end_loop %>
-			<% end_if %>
-		</div>
+			</div>
+		<% end_if %>
 		<sidebar class="recent-submissions hidden-xs">
 			<div class="section-header-bar small hidden-xs">
 				<div class="section-title right">

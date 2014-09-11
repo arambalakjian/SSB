@@ -18,10 +18,10 @@
 				<div class="header-right">
 					<% if CurrentMember %>
 						<div class="profile-utility-dropdown">
-							<% with CurrentMember %><% if Image %>$Image.CroppedImage(42,42)<% else %><img src="$Top.ThemeDir/images/male_silluete.png" alt="profie image" /><% end_if %><% end_with %><i class="icon-chevron-down"></i>
+							<% with CurrentMember %><% if Image %>$Image.CroppedImage(42,42)<% else %><img src="$Top.ThemeDir/images/male_silluete.png" alt="profie image" /><% end_if %><% end_with %><i class="icon-chevron-down chevron"></i>
 							<ul class="utility-links">
-								<li><a href="{$PageType(ProfilePage).Link}">Profile</a></li>
-								<li><a href="/Security/Logout">Logout</a></li>
+								<li><a href="{$PageType(ProfilePage).Link}"><i class="icon-user"></i>Profile</a></li>
+								<li><a href="/Security/Logout"><i class="icon-signout"></i>Logout</a></li>
 							</ul>
 						</div>
 					<% else %>

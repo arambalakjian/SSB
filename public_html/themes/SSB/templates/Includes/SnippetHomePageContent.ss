@@ -7,5 +7,4 @@
 		</div>
 	</div>
 	<div class="title">$Title</div>
-	<div class="description">$ContentPreview</div>
 </div>

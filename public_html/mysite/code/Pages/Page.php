@@ -111,8 +111,8 @@ class Page_Controller extends ContentController
 
 				//show hide the utility menu
 				jQuery('.profile-utility-dropdown').on('click', function(){
-					jQuery(this).find('i').toggleClass('icon-chevron-down');
-					jQuery(this).find('i').toggleClass('icon-chevron-up');
+					jQuery(this).find('i.chevron').toggleClass('icon-chevron-down');
+					jQuery(this).find('i.chevron').toggleClass('icon-chevron-up');
 					jQuery(this).find('.utility-links').slideToggle();
 				});
 				//show hide the filter buttons
