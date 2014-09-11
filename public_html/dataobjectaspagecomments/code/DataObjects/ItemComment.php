@@ -17,6 +17,12 @@ class ItemComment extends DataObject {
 	static $has_many = array(
 		'Replies' => 'ItemComment'
 	);
+
+	static $summary_fields = array(
+		'Author.Email' => 'Author Email',
+		'Item.Title' => 'Item',
+		'Comment.Summary' => 'Comment'
+	);
 	
 	public function getCMSFields() 
 	{

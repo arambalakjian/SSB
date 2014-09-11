@@ -1,4 +1,4 @@
-<div id="login-box" class="container">
+<div id="login-box" class="container <% if $InSecurity %>show<% end_if %>">
 	<div class="login-section">
 		<div class="login-container">
 			<h3>Sign in to SSBits</h3>
@@ -11,6 +11,11 @@
 					<p class="login-intro">Using your Email and Password</p>
 					$LoginForm
 				</div>
+			</div>
+			<div class="row">
+				<p class="col-sm-8 col-sm-offset-2 registration-details">
+					Not a member yet? <a href="{$BaseHref}profile/register">Register here</a>
+				</p>
 			</div>
 		</div>
 	</div>

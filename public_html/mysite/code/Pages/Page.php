@@ -69,7 +69,9 @@ class Page_Controller extends ContentController
 		 */
         //Add all the files to combine into an array
         $CSSFiles = array(
-            $themeFolder . '/css/core.css'
+            $themeFolder . '/css/core.css',
+            $themeFolder . '/js/syntaxhighlighter/styles/shCore.css',
+            $themeFolder . '/css/shThemeSSB.css'
         );
 
         //Combine!  
@@ -88,7 +90,12 @@ class Page_Controller extends ContentController
 			$themeFolder . "/js/script.js",
 			$themeFolder . "/js/bootstrap/alert.js",
 			$themeFolder . "/js/bootstrap/collapse.js",
-			$themeFolder . "/js/bootstrap/transition.js"
+			$themeFolder . "/js/bootstrap/transition.js",
+			$themeFolder . '/js/syntaxhighlighter/scripts/shCore.js',
+			$themeFolder . '/js/syntaxhighlighter/scripts/shBrushCss.js',
+			$themeFolder . '/js/syntaxhighlighter/scripts/shBrushJScript.js',
+			$themeFolder . '/js/syntaxhighlighter/scripts/shBrushPhp.js',
+			$themeFolder . '/js/syntaxhighlighter/scripts/shBrushXml.js'
         );	
          
         //Combine!  
@@ -101,13 +108,6 @@ class Page_Controller extends ContentController
 				jQuery('#MemberLoginForm_LoginForm').placeholderLabels();
 				
 				jQuery('#SearchForm_SearchForm_Search').clearField();
-
-				//show/hide the login form
-				jQuery('.sign-in-button').on('click', function(){
-
-					jQuery('body, html').animate({scrollTop: 0});
-					jQuery('#login-box').slideToggle();
-				});
 
 				//show hide the utility menu
 				jQuery('.profile-utility-dropdown').on('click', function(){
@@ -129,9 +129,30 @@ class Page_Controller extends ContentController
 					}
 					else jQuery(this).html('Hide Replies <i class="icon-chevron-up"></i>');
 				});
+
+				//run syntax highlighter
+				SyntaxHighlighter.all();
+
 			});
 JS
 		);
+
+		//add script for login button if not in the security area
+		if(!$this->InSecurity())
+		{
+			Requirements::customScript(<<<JS
+				jQuery(document).ready(function() {
+					//show/hide the login form
+					jQuery('.sign-in-button').on('click', function(ev){
+						ev.preventDefault();
+						jQuery('body, html').animate({scrollTop: 0});
+						jQuery('#login-box').slideToggle();
+					});
+
+				});
+JS
+			);
+		}
 
 	}
 
@@ -182,6 +203,17 @@ JS
             $array = new ArrayData($message);
             return $array->renderWith('Alert');
         }
+    }
+
+    /**
+     * check if the current page uses the security controller
+     */
+    public function InSecurity()
+    {
+    	if(Controller::curr() instanceof Security)
+    	{
+    		return true;
+    	}
     }
 
 }

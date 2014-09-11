@@ -58,9 +58,28 @@ class AddArticleIdeaForm extends Form
 	{      
 		$idea = ArticleIdea::create();
 		$form->saveInto($idea);
+
+		if($memberId = Member::currentUserId())
+		{
+			$idea->MemberID = $memberId;
+		}
+		else
+		{
+			Page_Controller::setAlert('You need to be logged in to submit an idea.', 'danger');
+			return $form->controller->redirect($form->controller->Link());
+		}
+
 		if($idea->write())
 		{
-			return $this->success($form);
+			//create an initial vote for the current member
+			$vote = ArticleVote::create();
+			$vote->ArticleIdeaID = $idea->ID;
+			$vote->MemberID = $memberId;
+
+			if($vote->write())
+			{
+				return $this->success($form);
+			}
 		}
 	}  
 

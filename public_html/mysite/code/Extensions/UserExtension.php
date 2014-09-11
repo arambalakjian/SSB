@@ -9,7 +9,8 @@ class UserExtension extends DataExtension {
 		'LinkedInName' => 'Varchar(100)',
 		'Website' => 'Varchar(255)',
 		'Bio' => 'Text',
-		'SnippetCount' => 'Int'
+		'SnippetCount' => 'Int',
+		'RetainContentOnDelete' => 'Boolean'
 	);
 
 	static $has_one = array(
@@ -20,16 +21,21 @@ class UserExtension extends DataExtension {
 		'Tutorials' => 'Tutorial',
 		'Views' => 'View',
 		'Snippets' => 'Snippet',
-		'SOTMNominees' => 'SOTMNominee'		
+		'SOTMNominees' => 'SOTMNominee',
+		'ArticleIdeas' => 'ArticleIdea',
+		'ArticleVotes' => 'ArticleVote'		
 	);
 	
 	public function updateCMSFields(FieldList $fields) 
 	{	
 		$fields->removeByName('SnippetCount');
+		$fields->removeByName('ArticleVotes');
+		$fields->removeByName('ArticleIdeas');
 
 		$fields->addFieldToTab('Root.Main', new TextField('Username', 'Username'), 'Email');
 		$fields->addFieldToTab('Root.Main', new TextField('Website', 'Website'), 'Locale');
 		$fields->addFieldToTab('Root.Main', new TextareaField('Bio', 'Bio'), 'Locale');
+		$fields->addFieldToTab('Root.Main', new CheckboxField('RetainContentOnDelete', 'Retain associated content on delete?'));
 
 		//social media accounts
 		$fields->addFieldToTab('Root.SocialMedia', new TextField('GithubName', 'Github name'));
@@ -56,6 +62,10 @@ class UserExtension extends DataExtension {
 		$gridConfig = GridFieldConfig_RecordEditor::create();
 		$gridField = new GridField('SOTMNominees', 'SOTM Nominees', $this->owner->SOTMNominees(), $gridConfig);
 		$fields->addFieldToTab('Root.SOTMNominees', $gridField);
+
+		$gridConfig = GridFieldConfig_RecordEditor::create();
+		$gridField = new GridField('ArticleIdeas', 'Article Ideas', $this->owner->ArticleIdeas(), $gridConfig);
+		$fields->addFieldToTab('Root.Ideas', $gridField);
    	}
 
    	/**
@@ -79,5 +89,58 @@ class UserExtension extends DataExtension {
    		{
    			return $profilePage->Link() . 'show/' . $this->owner->ID;
    		}
+   	}
+
+   	/**
+   	 * ensure that any submitted content is deleted along with a member
+   	 */
+   	public function onBeforeDelete()
+   	{
+   		//remove content unless set to retain it
+   		if(!$this->owner->RetainContentOnDelete)
+   		{
+   			//delete snippets
+   			if($snips = $this->Snippets())
+   			{
+   				foreach($snips as $snip)
+   				{
+   					$snip->delete();
+   				}
+   			}
+   			//delete SOTM Nominees
+   			if($nominees = $this->SOTMNominees())
+   			{
+   				foreach($nominees as $nominee)
+   				{
+   					$nominee->delete();
+   				}
+   			}
+   			//delete ArticleIdeas
+   			if($ideas = $this->ArticleIdeas())
+   			{
+   				foreach($ideas as $idea)
+   				{
+   					$idea->delete();
+   				}
+   			}
+   			//delete ArticleVotes
+   			if($votes = $this->ArticleVotes())
+   			{
+   				foreach($votes as $vote)
+   				{
+   					$vote->delete();
+   				}
+   			}
+   			//delete Comments
+   			if($comments = $this->ItemComments())
+   			{
+   				foreach($comments as $comment)
+   				{
+   					$comment->delete();
+   				}
+   			}
+   		}
+
+   		parent::onBeforeDelete();
    	}
 }

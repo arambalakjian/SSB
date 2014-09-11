@@ -10,7 +10,9 @@ class ProfilePage_Controller extends Page_Controller
 	static $allowed_actions = array(
 		'show',
 		'edit',
-		'EditProfileForm'				
+		'register',
+		'EditProfileForm',
+		'RegistrationForm'				
 	);	
 
 	public function init()
@@ -85,5 +87,15 @@ JS
 	public function EditProfileForm()
 	{
 		return new EditProfileForm($this, 'EditProfileForm');
+	}
+
+	/**
+	 * get the registration form 
+	 * 
+	 * @return RegistrationForm
+	 */
+	public function RegistrationForm()
+	{
+		return new RegistrationForm($this, 'RegistrationForm');
 	}
 }

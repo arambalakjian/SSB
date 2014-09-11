@@ -25,7 +25,7 @@
 							</ul>
 						</div>
 					<% else %>
-						<span class="sign-in-button">Sign In</span>
+						<a class="sign-in-button" href="{$BaseHref}Security/login">Sign In</a>
 					<% end_if %>
 					$SearchForm
 				</div>

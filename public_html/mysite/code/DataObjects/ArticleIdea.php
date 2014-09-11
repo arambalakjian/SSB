@@ -7,6 +7,10 @@ class ArticleIdea extends DataObject
 		'Rating' => 'Int'
 	);
 
+	static $has_one = array(
+		'Member' => 'Member'
+	);
+
 	static $has_many = array(
 		'ArticleVotes' => 'ArticleVote'
 	);

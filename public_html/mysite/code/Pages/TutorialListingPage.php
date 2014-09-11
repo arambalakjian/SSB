@@ -44,18 +44,6 @@ class TutorialListingPage_Controller extends FilteredListingPage_Controller
 	{
 		parent::init();	
 
-		//add code highlighter
-		//Set our theme's CSS folder
-        $themeFolder = $this->ThemeDir();
-		Requirements::javascript($themeFolder . '/js/syntaxhighlighter/scripts/shCore.js');
-		Requirements::javascript($themeFolder . '/js/syntaxhighlighter/scripts/shBrushCss.js');
-		Requirements::javascript($themeFolder . '/js/syntaxhighlighter/scripts/shBrushJScript.js');
-		Requirements::javascript($themeFolder . '/js/syntaxhighlighter/scripts/shBrushPhp.js');
-		Requirements::javascript($themeFolder . '/js/syntaxhighlighter/scripts/shBrushXml.js');
-
-		Requirements::css($themeFolder . '/js/syntaxhighlighter/styles/shCore.css');
-		Requirements::css($themeFolder . '/css/shThemeSSB.css');
-
 		Requirements::customScript(<<<JS
 
 			jQuery(document).ready(function(){
@@ -69,9 +57,6 @@ class TutorialListingPage_Controller extends FilteredListingPage_Controller
 				jQuery('.article-ideas .submit-button').on('click', function(){
 					jQuery('.submit-idea-container').slideToggle();
 				});
-
-				//run syntax highlighter
-				SyntaxHighlighter.all()
 			});
 JS
 		);

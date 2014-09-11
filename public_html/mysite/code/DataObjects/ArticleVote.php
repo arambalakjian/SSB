@@ -7,6 +7,9 @@ class ArticleVote extends DataObject
 		'ArticleIdea' => 'ArticleIdea'
 	);
 
+	static $summary_fields = array(
+		'Member.Name' => 'Member'		
+	);
 
 	/**
 	 * Update the attached articles rating after creating/deleting the vote

@@ -234,6 +234,9 @@ body {
 }
 #login-box {
 	display: none;
+	&.show {
+		display: block;
+	}
 	.login-section {
 		.make-row();
 
@@ -317,6 +320,10 @@ body {
 			form{
 			  float: none;
 			}
+		}
+		.registration-details {
+			margin-top: 15px;
+			text-align: center;
 		}
 	}
 }

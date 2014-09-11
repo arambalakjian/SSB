@@ -16,6 +16,9 @@ Image:
 Member:
   extensions:
     - UserExtension
+Security:
+  extensions:
+    - SecurityExtension
 Post:
   extensions:
     - CommentableItem
