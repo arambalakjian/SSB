@@ -34,11 +34,11 @@ JS
 	 */
 	public function getSelectedMember()
 	{
-		if($this->request->params())
+		if($params = $this->request->params())
 		{
 			if(isset($params['ID']))
 			{
-				if(Member::get()->filter(array('Username'=>$params['ID']))->First())
+				if($member = Member::get()->byID($params['ID']))
 				{
 					return $member;
 				}

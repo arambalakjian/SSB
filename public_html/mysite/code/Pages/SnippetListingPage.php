@@ -10,12 +10,13 @@ class SnippetListingPage_Controller extends FilteredListingPage_Controller
 	static $item_class = 'Snippet';
 	
 	static $allowed_actions = array(
-		'add',
+		'add' => '->getCanAddNewItem',
 		'edit',
 		'AddSnippetForm',
 		'EditSnippetForm',
 		'filefields'
 	);
+
 
 	private static $ajax_filter = false;	
 

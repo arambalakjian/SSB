@@ -15,7 +15,7 @@
 				$AddSiteForm
 			<% else %>
 				<div class="login-to-submit">
-					You need to be <a href="{$BaseHref}Security/Login">signed in</a> to submit a site.
+					You need to be <a href="{$BaseHref}Security/Login?BackURL={$Link}/add">signed in</a> to submit a site.
 				</div>
 			<% end_if %>
 			

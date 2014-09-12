@@ -1,4 +1,4 @@
-<div id="login-box" class="container <% if $InSecurity %>show<% end_if %>">
+<div id="login-box" class="container <% if $OpenForm %>show-login<% end_if %>">
 	<div class="login-section">
 		<div class="login-container">
 			<h3>Sign in to SSBits</h3>

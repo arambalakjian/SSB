@@ -76,7 +76,7 @@ class SOTMPage_Controller extends Page_Controller
 {
 	static $allowed_actions = array(
 		'AddSiteForm',
-		'add',
+		'add' => '->getCanAddNewItem',
 		'show',
 		'voteresults'		
 	);

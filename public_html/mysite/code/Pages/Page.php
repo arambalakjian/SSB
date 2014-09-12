@@ -51,7 +51,8 @@ class Page extends SiteTree {
 class Page_Controller extends ContentController 
 {
 	private static $allowed_actions = array(
-		'OpauthLoginForm'
+		'OpauthLoginForm',
+		'login'
 	);
 	
 	function init() 
@@ -215,5 +216,27 @@ JS
     		return true;
     	}
     }
+    /**
+     * check if the login form should be open
+     */
+    public function OpenForm()
+    {
+    	if($this->InSecurity || $this->request->param('Action') == 'login')
+    	{
+    		return true;
+    	}
+    }
+
+    /**
+     * check if a member is logged in before allowing them to add new items
+     */
+	public function getCanAddNewItem()
+	{
+		if(!Member::currentUserId())
+		{
+			return $this->redirect('security/login?BackURL=' . $this->Link() . 'add');
+		}
+		else return true;
+	}
 
 }

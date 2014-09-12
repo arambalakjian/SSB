@@ -104,7 +104,12 @@ class UserExtension extends DataExtension {
    			{
    				foreach($snips as $snip)
    				{
-   					$snip->delete();
+                  $origStage = Versioned::current_stage();
+                  $clone = clone $snip;
+                  Versioned::reading_stage('Live');
+   					$clone->delete();
+                  Versioned::reading_stage($origStage);
+                  $snip->delete();
    				}
    			}
    			//delete SOTM Nominees
@@ -112,7 +117,12 @@ class UserExtension extends DataExtension {
    			{
    				foreach($nominees as $nominee)
    				{
-   					$nominee->delete();
+                  $origStage = Versioned::current_stage();
+                  $clone = clone $nominee;
+                  Versioned::reading_stage('Live');
+                  $clone->delete();
+                  Versioned::reading_stage($origStage);
+                  $nominee->delete();
    				}
    			}
    			//delete ArticleIdeas
@@ -120,7 +130,12 @@ class UserExtension extends DataExtension {
    			{
    				foreach($ideas as $idea)
    				{
-   					$idea->delete();
+                  $origStage = Versioned::current_stage();
+                  $clone = clone $idea;
+                  Versioned::reading_stage('Live');
+                  $clone->delete();
+                  Versioned::reading_stage($origStage);
+                  $idea->delete();
    				}
    			}
    			//delete ArticleVotes
@@ -128,7 +143,12 @@ class UserExtension extends DataExtension {
    			{
    				foreach($votes as $vote)
    				{
-   					$vote->delete();
+                  $origStage = Versioned::current_stage();
+                  $clone = clone $vote;
+                  Versioned::reading_stage('Live');
+                  $clone->delete();
+                  Versioned::reading_stage($origStage);
+                  $vote->delete();
    				}
    			}
    			//delete Comments
@@ -136,11 +156,30 @@ class UserExtension extends DataExtension {
    			{
    				foreach($comments as $comment)
    				{
-   					$comment->delete();
+                  $origStage = Versioned::current_stage();
+                  $clone = clone $comment;
+                  Versioned::reading_stage('Live');
+                  $clone->delete();
+                  Versioned::reading_stage($origStage);
+                  $comment->delete();
    				}
    			}
    		}
 
    		parent::onBeforeDelete();
    	}
+
+      /**
+       * get the link to the users profile page 
+       * 
+       * @return String
+       */
+      public function Link()
+      {
+         if($profilePage = ProfilePage::get()->First())
+         {
+            return $profilePage->Link() . 'show/' . $this->owner->ID;
+         }
+      }
+
 }
