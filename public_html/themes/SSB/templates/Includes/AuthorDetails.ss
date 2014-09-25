@@ -1,6 +1,6 @@
 <div class="author">
 	<div class="author-image">
-		$Image.CroppedImage(75,75)
+		$Avatar.CroppedImage(75,75)
 	</div>
 	<div class="info">
 		<p class="title">Author</p>

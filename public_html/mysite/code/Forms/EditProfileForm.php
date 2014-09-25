@@ -34,13 +34,13 @@ class EditProfileForm extends Form
 	{
 		$member = Member::currentUser();
 
-		$imageField = new UploadField('Image', 'Profile Picture');
+		$imageField = new UploadField('Avatar', 'Profile Picture');
 		$imageField->setCanAttachExisting(false);
 		$imageField->setCanPreviewFolder(false);
 		$imageField->setOverwriteWarning(false);
 		$imageField->setAllowedMaxFileNumber(1);
 		$imageField->setFileEditFields(null);
-		$imageField->setFolderName('Uploads/profile-pictures');
+		$imageField->setFolderName('Uploads/avatars');
 
 		$passField = new ConfirmedPasswordField('Password', 'Password');
 		$passField->canBeEmpty = true;
@@ -60,7 +60,8 @@ class EditProfileForm extends Form
 		    new TextField('GithubName', 'Github Username'),
 		    new TextField('TwitterName', 'Twitter Username'),
 		    new TextField('Website', 'Website'),
-		    new TextareaField('Bio', 'Bio'),
+		    new TextField('JobTitle', 'Job title'),
+		    new TextareaField('Blurb', 'Bio'),
 		    $imageField,
 		    new LiteralField('colend', '</div>')
 		);

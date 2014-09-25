@@ -182,12 +182,4 @@ class UserExtension extends DataExtension {
             return $profilePage->Link() . 'show/' . $this->owner->ID;
          }
       }
-
-      /*
-      *  Added to ensure backwards compatability in templates already setup to use Image().
-      */
-      public function Image()
-      {
-         return $this->owner->Avatar();
-      }
 }

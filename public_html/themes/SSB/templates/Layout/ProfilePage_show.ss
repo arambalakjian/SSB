@@ -10,12 +10,15 @@
 	<div class="row">
 		<sidebar class="member-sidebar">
 			<% with Member %>
-				<% if Image %>
+				<% if $Avatar %>
 					<div class="image-container hidden-xs">
-						$Image.CroppedImage(300,300)
+						$Avatar.CroppedImage(300,300)
 					</div>
 				<% end_if %>
 				<div class="member-info">
+					<% if JobTitle %>
+						<p><i class="icon-envelope-alt"></i> $JobTitle</p>
+					<% end_if %>					
 					<% if Email %>
 						<p><i class="icon-envelope-alt"></i> <a href="mailto: {$Email}">$Email</a></p>
 					<% end_if %>
@@ -32,7 +35,7 @@
 						<p><i class="icon-desktop"></i> <a href="{$Website.URL}" target="_BLANK">$Website</a></p>
 					<% end_if %>
 					<% if Bio %>
-						<p><i class="icon-edit"></i> $Bio</p>
+						<p><i class="icon-edit"></i> $Blurb</p>
 					<% end_if %>
 				</div>
 			<% end_with %>
