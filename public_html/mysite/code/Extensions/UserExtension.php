@@ -8,13 +8,14 @@ class UserExtension extends DataExtension {
 		'TwitterName' => 'Varchar(25)',
 		'LinkedInName' => 'Varchar(100)',
 		'Website' => 'Varchar(255)',
-		'Bio' => 'Text',
+		'Blurb' => 'Text',
+      'JobTitle'=> 'Varchar(255)',
 		'SnippetCount' => 'Int',
 		'RetainContentOnDelete' => 'Boolean'
 	);
 
 	static $has_one = array(
-		'Image' => 'Image'		
+		'Avatar' => 'Image'		
 	);
 
 	static $has_many = array(
@@ -44,7 +45,7 @@ class UserExtension extends DataExtension {
 
 		//profile picture
 		$fields->addFieldToTab('Root.Image', $imageField = new UploadField('Image', 'Image'));
-		$imageField->setFolderName('Uploads/profile-pictures');
+		$imageField->setFolderName('Uploads/avatars');
 
 		//grid fields to show posts
 		$gridConfig = GridFieldConfig_RecordEditor::create();
