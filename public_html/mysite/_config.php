@@ -28,7 +28,7 @@ TwitterFeedExtension::$twitter_cache_id = 'DRgxVWiclR'; //optional - required if
 
 TwitterFeedExtension::$twitter_consumer_key = 'zDglt0Syk4Odlk59V6cCjqsUw'; //required
 TwitterFeedExtension::$twitter_consumer_secret = 'tmuYIpyQHggu7Ke3wgfeDRb8DyFHJGagxJAuAzsSaiCNcC9mea'; //required
-TwitterFeedExtension::$twitter_oauth_token = '189499763-Ceda3fx17trpHuBU9N0UCDKgwGJHtUoTR0TXD9hB'; //required
-TwitterFeedExtension::$twitter_oauth_token_secret = 'F3iJ8FXhgqUim9PdQYkcgmjTD98Vh56xiBBnNbRi6WARF'; //required
+TwitterFeedExtension::$twitter_oauth_token = '189499763-2W0xaKPSX6UMWHXJ5UyMB6noJtc82MvEWctBdrrI'; //required
+TwitterFeedExtension::$twitter_oauth_token_secret = 'VHWQaIdXhBMYGLBNZTOvHXDN1MxiJ7RDxEYg0h6ylJY3x'; //required
 
 TwitterFeedExtension::$twitter_search_term = '#silverstripe';
