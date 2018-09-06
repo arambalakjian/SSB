@@ -1,3 +1,3 @@
-# Carbon Crayon Base SS Files
+# SSBits site V2
 
-The base theme and code files for a Carbon Crayon SilverStripe project
+Never launched but site completed
